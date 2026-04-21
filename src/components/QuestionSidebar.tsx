@@ -98,21 +98,13 @@ export const QuestionSidebar = () => {
                     <SidebarMenu data-tutorial-id="add-questions-buttons">
                         <SidebarMenuItem>
                             <AddQuestionDialog>
-                                <SidebarMenuButton disabled={$isLoading}>
+                                <SidebarMenuButton
+                                    disabled={$isLoading}
+                                    className="h-16 text-lg"
+                                >
                                     Add Question
                                 </SidebarMenuButton>
                             </AddQuestionDialog>
-                        </SidebarMenuItem>
-                        <SidebarMenuItem>
-                            <a
-                                href="https://github.com/taibeled/JetLagHideAndSeek"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <SidebarMenuButton className="bg-emerald-600 transition-colors">
-                                    Star this on GitHub! It&apos;s free :)
-                                </SidebarMenuButton>
-                            </a>
                         </SidebarMenuItem>
                         {!$autoSave && (
                             <SidebarMenuItem>

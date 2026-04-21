@@ -17,7 +17,7 @@ import {
     customInitPreference,
     displayHidingZones,
     drawingQuestionKey,
-    hiderMode,
+    hiderModeEnabled,
     isLoading,
     questionModified,
     questions,
@@ -49,7 +49,7 @@ export const MatchingQuestionComponent = ({
     className?: string;
 }) => {
     useStore(triggerLocalRefresh);
-    const $hiderMode = useStore(hiderMode);
+    const $hiderMode = useStore(hiderModeEnabled);
     const $questions = useStore(questions);
     const $displayHidingZones = useStore(displayHidingZones);
     const $drawingQuestionKey = useStore(drawingQuestionKey);
@@ -60,12 +60,11 @@ export const MatchingQuestionComponent = ({
         "custom-zone" | "custom-points" | null
     >(null);
     const label = `Matching
-    ${
-        $questions
+    ${$questions
             .filter((q) => q.id === "matching")
             .map((q) => q.key)
             .indexOf(questionKey) + 1
-    }`;
+        }`;
 
     let questionSpecific = <></>;
 
@@ -79,8 +78,8 @@ export const MatchingQuestionComponent = ({
                             trigger="OSM Zone"
                             options={{
                                 2: "OSM Zone 2 (Country)",
-                                3: "OSM Zone 3 (region in Japan)",
-                                4: "OSM Zone 4 (prefecture in Japan)",
+                                3: "OSM Zone 3",
+                                4: "OSM Zone 4",
                                 5: "OSM Zone 5",
                                 6: "OSM Zone 6",
                                 7: "OSM Zone 7",
@@ -126,17 +125,12 @@ export const MatchingQuestionComponent = ({
                 </span>
             );
             break;
-        case "aquarium":
         case "hospital":
-        case "peak":
         case "museum":
-        case "theme_park":
-        case "zoo":
         case "cinema":
-        case "library":
-        case "golf_course":
-        case "consulate":
         case "park":
+        case "university":
+        case "river":
             questionSpecific = (
                 <span className="px-2 text-center text-orange-500">
                     This question will only influence the map when you click on
@@ -215,18 +209,12 @@ export const MatchingQuestionComponent = ({
                     } else {
                         if (
                             data.type === "airport" ||
-                            data.type === "major-city" ||
-                            data.type === "aquarium-full" ||
-                            data.type === "zoo-full" ||
-                            data.type === "theme_park-full" ||
-                            data.type === "peak-full" ||
-                            data.type === "museum-full" ||
-                            data.type === "hospital-full" ||
-                            data.type === "cinema-full" ||
-                            data.type === "library-full" ||
-                            data.type === "golf_course-full" ||
-                            data.type === "consulate-full" ||
-                            data.type === "park-full"
+                            data.type === "museum" ||
+                            data.type === "hospital" ||
+                            data.type === "cinema" ||
+                            data.type === "park" ||
+                            data.type === "university" ||
+                            data.type === "river"
                         ) {
                             (data as any).geo = await findMatchingPlaces(data);
                         } else {
@@ -320,18 +308,12 @@ export const MatchingQuestionComponent = ({
                                 } else {
                                     if (
                                         data.type === "airport" ||
-                                        data.type === "major-city" ||
-                                        data.type === "aquarium-full" ||
-                                        data.type === "zoo-full" ||
-                                        data.type === "theme_park-full" ||
-                                        data.type === "peak-full" ||
-                                        data.type === "museum-full" ||
-                                        data.type === "hospital-full" ||
-                                        data.type === "cinema-full" ||
-                                        data.type === "library-full" ||
-                                        data.type === "golf_course-full" ||
-                                        data.type === "consulate-full" ||
-                                        data.type === "park-full"
+                                        data.type === "museum" ||
+                                        data.type === "hospital" ||
+                                        data.type === "cinema" ||
+                                        data.type === "park" ||
+                                        data.type === "university" ||
+                                        data.type === "river"
                                     ) {
                                         (data as any).geo =
                                             await findMatchingPlaces(data);
@@ -407,10 +389,10 @@ export const MatchingQuestionComponent = ({
                             data.lengthComparison
                                 ? data.lengthComparison
                                 : data.same === true
-                                  ? "same"
-                                  : data.same === false
-                                    ? "different"
-                                    : "same"
+                                    ? "same"
+                                    : data.same === false
+                                        ? "different"
+                                        : "same"
                         }
                         onValueChange={(
                             value: "shorter" | "same" | "longer" | "different",
@@ -428,7 +410,7 @@ export const MatchingQuestionComponent = ({
                                 questionModified((data.same = false));
                             }
                         }}
-                        disabled={!!$hiderMode || !data.drag || $isLoading}
+                        disabled={$hiderMode || !data.drag || $isLoading}
                     >
                         <ToggleGroupItem value="shorter">
                             Shorter
@@ -448,7 +430,7 @@ export const MatchingQuestionComponent = ({
                                 questionModified((data.same = false));
                             }
                         }}
-                        disabled={!!$hiderMode || !data.drag || $isLoading}
+                        disabled={$hiderMode || !data.drag || $isLoading}
                     >
                         <ToggleGroupItem value="different">
                             Different

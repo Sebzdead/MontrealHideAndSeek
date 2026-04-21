@@ -14,7 +14,7 @@ import {
 import { UnitSelect } from "@/components/UnitSelect";
 import {
     drawingQuestionKey,
-    hiderMode,
+    hiderModeEnabled,
     isLoading,
     questionModified,
     questions,
@@ -231,7 +231,7 @@ const TentacleLocationSelector = ({
     disabled: boolean;
 }) => {
     useStore(triggerLocalRefresh);
-    const $hiderMode = useStore(hiderMode);
+    const $hiderMode = useStore(hiderModeEnabled);
     const locations = use(promise);
 
     // Filter locations to only those within the radius of the primary location
@@ -299,7 +299,7 @@ const TentacleLocationSelector = ({
 
                 questionModified();
             }}
-            disabled={!!$hiderMode || disabled}
+            disabled={$hiderMode || disabled}
         />
     );
 };

@@ -25,7 +25,8 @@ import {
     disabledStations,
     displayHidingZonesOptions,
     followMe,
-    hiderMode,
+    gpsPosition,
+    hiderModeEnabled,
     hidingRadius,
     hidingRadiusUnits,
     hidingZone,
@@ -33,6 +34,7 @@ import {
     leafletMapContext,
     mapGeoJSON,
     mapGeoLocation,
+    measureDistanceEnabled,
     pastebinApiKey,
     permanentOverlay,
     planningModeEnabled,
@@ -54,18 +56,13 @@ import {
 } from "@/lib/utils";
 import { questionsSchema } from "@/maps/schema";
 
-import { LatitudeLongitude } from "./LatLngPicker";
 import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Select } from "./ui/select";
 import { Separator } from "./ui/separator";
-import {
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
-} from "./ui/sidebar-l";
+import { SidebarMenu } from "./ui/sidebar-l";
 import { UnitSelect } from "./UnitSelect";
 
 const HIDING_ZONE_URL_PARAM = "hz";
@@ -79,7 +76,9 @@ export const OptionDrawers = ({ className }: { className?: string }) => {
     const $defaultUnit = useStore(defaultUnit);
     const $animateMapMovements = useStore(animateMapMovements);
     const $autoZoom = useStore(autoZoom);
-    const $hiderMode = useStore(hiderMode);
+    const $hiderModeEnabled = useStore(hiderModeEnabled);
+    const $measureDistanceEnabled = useStore(measureDistanceEnabled);
+    const $gpsPosition = useStore(gpsPosition);
     const $autoSave = useStore(autoSave);
     const $hidingZone = useStore(hidingZone);
     const $planningMode = useStore(planningModeEnabled);
@@ -212,7 +211,7 @@ export const OptionDrawers = ({ className }: { className?: string }) => {
                                 id:
                                     p.id ??
                                     (typeof crypto !== "undefined" &&
-                                    typeof (crypto as any).randomUUID ===
+                                        typeof (crypto as any).randomUUID ===
                                         "function"
                                         ? (crypto as any).randomUUID()
                                         : String(Date.now()) + Math.random()),
@@ -645,73 +644,48 @@ export const OptionDrawers = ({ className }: { className?: string }) => {
                                     }
                                 />
                             </div>
-                            <div className="flex flex-row items-center gap-2">
-                                <label className="text-2xl font-semibold font-poppins">
-                                    Hider mode?
-                                </label>
-                                <Checkbox
-                                    checked={!!$hiderMode}
-                                    onCheckedChange={() => {
-                                        if ($hiderMode === false) {
-                                            const $leafletMapContext =
-                                                leafletMapContext.get();
-
-                                            if ($leafletMapContext) {
-                                                const center =
-                                                    $leafletMapContext.getCenter();
-                                                hiderMode.set({
-                                                    latitude: center.lat,
-                                                    longitude: center.lng,
-                                                });
-                                            } else {
-                                                hiderMode.set({
-                                                    latitude: 0,
-                                                    longitude: 0,
-                                                });
-                                            }
-                                        } else {
-                                            hiderMode.set(false);
+                            <div className="flex flex-col gap-2 w-full">
+                                <div className="flex flex-row items-center gap-2">
+                                    <label className="text-2xl font-semibold font-poppins">
+                                        Hider mode?
+                                    </label>
+                                    <Checkbox
+                                        checked={$hiderModeEnabled}
+                                        onCheckedChange={(v) =>
+                                            hiderModeEnabled.set(!!v)
                                         }
-                                    }}
-                                />
-                            </div>
-                            {$hiderMode !== false && (
-                                <SidebarMenu>
-                                    <LatitudeLongitude
-                                        latitude={$hiderMode.latitude}
-                                        longitude={$hiderMode.longitude}
-                                        inlineEdit
-                                        onChange={(latitude, longitude) => {
-                                            $hiderMode.latitude =
-                                                latitude ?? $hiderMode.latitude;
-                                            $hiderMode.longitude =
-                                                longitude ??
-                                                $hiderMode.longitude;
-
-                                            if ($autoSave) {
-                                                hiderMode.set({
-                                                    ...$hiderMode,
-                                                });
-                                            } else {
-                                                triggerLocalRefresh.set(
-                                                    Math.random(),
-                                                );
-                                            }
-                                        }}
-                                        label="Hider Location"
                                     />
-                                    {!autoSave && (
-                                        <SidebarMenuItem>
-                                            <SidebarMenuButton
-                                                className="bg-blue-600 p-2 rounded-md font-semibold font-poppins transition-shadow duration-500 mt-2"
-                                                onClick={save}
-                                            >
-                                                Save
-                                            </SidebarMenuButton>
-                                        </SidebarMenuItem>
-                                    )}
-                                </SidebarMenu>
-                            )}
+                                </div>
+                                {$hiderModeEnabled && (
+                                    <div className="flex flex-col gap-2 pl-2">
+                                        {$gpsPosition ? (
+                                            <p className="text-sm text-green-400 font-medium">
+                                                📍 GPS: {$gpsPosition.lat.toFixed(5)}, {$gpsPosition.lng.toFixed(5)}
+                                            </p>
+                                        ) : (
+                                            <p className="text-sm text-muted-foreground">
+                                                Waiting for GPS signal…
+                                            </p>
+                                        )}
+                                        <div className="flex flex-row items-center gap-2">
+                                            <label className="text-lg font-semibold font-poppins">
+                                                Measure distance?
+                                            </label>
+                                            <Checkbox
+                                                checked={$measureDistanceEnabled}
+                                                onCheckedChange={(v) =>
+                                                    measureDistanceEnabled.set(!!v)
+                                                }
+                                            />
+                                        </div>
+                                        {$measureDistanceEnabled && (
+                                            <p className="text-xs text-muted-foreground">
+                                                Drag the red pin on the map to measure distance from your location.
+                                            </p>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </DrawerContent>

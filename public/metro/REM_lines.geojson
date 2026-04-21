@@ -1,0 +1,426 @@
+{
+    "type": "FeatureCollection",
+    "generator": "overpass-turbo",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp": "2026-04-19T02:24:52Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/2437600094",
+                "addr:city": "Kirkland",
+                "addr:housenumber": "3000",
+                "addr:street": "Rue Jean-Yves",
+                "name": "Kirkland",
+                "network": "REM",
+                "network:wikidata": "Q19582331",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "JYV",
+                "source": "NRCan-CanVec-10.0",
+                "station": "subway",
+                "subway": "yes",
+                "wikidata": "Q30668388",
+                "wikipedia": "fr:Station Kirkland"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.885608, 45.4403141]
+            },
+            "id": "node/2437600094"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/6295440196",
+                "addr:city": "Mont-Royal",
+                "addr:housenumber": "7300",
+                "addr:street": "Chemin Canora",
+                "light_rail": "yes",
+                "name": "Canora",
+                "network": "REM",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "CAN",
+                "station": "light_rail",
+                "wikidata": "Q3095500",
+                "wikipedia": "fr:Station Canora (REM)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6338787, 45.5137474]
+            },
+            "id": "node/6295440196"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/6295440197",
+                "addr:city": "Ville de Mont-Royal",
+                "addr:housenumber": "1275",
+                "addr:postcode": "H3R 1G8",
+                "addr:province": "QC",
+                "addr:street": "Chemin Dunkirk",
+                "light_rail": "yes",
+                "name": "Ville-de-Mont-Royal",
+                "network": "REM",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "MRL",
+                "station": "light_rail",
+                "wikidata": "Q3095522",
+                "wikipedia": "fr:Station Ville-de-Mont-Royal"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.643454, 45.5165145]
+            },
+            "id": "node/6295440197"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/7350710743",
+                "name": "Anse-à-l'Orme",
+                "network": "REM",
+                "network:wikidata": "Q19582331",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "SAB",
+                "station": "subway",
+                "subway": "yes",
+                "wikidata": "Q30668386",
+                "wikipedia": "fr:Station Anse-à-l'Orme"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.9099082, 45.4315922]
+            },
+            "id": "node/7350710743"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/7350710745",
+                "light_rail": "yes",
+                "name": "Des Sources",
+                "network": "REM",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "DSO",
+                "station": "light_rail",
+                "wikidata": "Q30668392",
+                "wikipedia": "fr:Station Des Sources"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.7911213, 45.4771022]
+            },
+            "id": "node/7350710745"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/7350710746",
+                "construction": "station",
+                "construction:public_transport": "station",
+                "construction:railway": "station",
+                "light_rail": "yes",
+                "name": "Marie-Curie",
+                "network": "REM",
+                "operator": "Pulsar",
+                "railway": "construction",
+                "ref": "TEC",
+                "station": "light_rail",
+                "wikidata": "Q30668387"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.7602942, 45.4800508]
+            },
+            "id": "node/7350710746"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/7350710747",
+                "air_conditioning": "yes",
+                "construction": "station",
+                "construction:public_transport": "station",
+                "construction:railway": "station",
+                "internet_access": "yes",
+                "level": "-1",
+                "light_rail": "yes",
+                "name": "YUL-Aéroport-Montréal-Trudeau",
+                "network": "REM",
+                "railway": "construction",
+                "ref": "AER",
+                "station": "light_rail",
+                "wikidata": "Q30668384"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.7496191, 45.4571284]
+            },
+            "id": "node/7350710747"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/7350710748",
+                "construction": "train_station",
+                "light_rail": "yes",
+                "name": "Fairview-Pointe-Claire",
+                "network": "REM",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "PTC",
+                "station": "light_rail",
+                "wikidata": "Q30668390",
+                "wikipedia": "fr:Station Fairview–Pointe-Claire"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.8353279, 45.4599523]
+            },
+            "id": "node/7350710748"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/7350710749",
+                "light_rail": "yes",
+                "name": "Côte-de-Liesse",
+                "network": "REM",
+                "opening_date": "2025",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "A40",
+                "station": "light_rail",
+                "train": "yes",
+                "wikidata": "Q30668376",
+                "wikipedia": "fr:Station Côte-de-Liesse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.661868, 45.5218291]
+            },
+            "id": "node/7350710749"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/7966937790",
+                "internet_access": "wlan",
+                "internet_access:fee": "no",
+                "light_rail": "yes",
+                "name": "McGill",
+                "network": "REM",
+                "opening_date": "2025",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "MCG",
+                "station": "light_rail"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.572129, 45.5024871]
+            },
+            "id": "node/7966937790"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/8205968569",
+                "air_conditioning": "yes",
+                "internet_access": "wlan",
+                "light_rail": "yes",
+                "name": "Gare Centrale",
+                "name:es": "Estación Central",
+                "network": "REM",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "GCT",
+                "station": "light_rail"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5666874, 45.4999265]
+            },
+            "id": "node/8205968569"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/8220190012",
+                "light_rail": "yes",
+                "name": "Montpellier",
+                "network": "REM",
+                "network:wikidata": "Q19582331",
+                "opening_date": "2025",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "MPE",
+                "station": "light_rail",
+                "wikidata": "Q3095526",
+                "wikipedia": "fr:Station Montpellier (REM)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6722229, 45.5248032]
+            },
+            "id": "node/8220190012"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/8223036864",
+                "internet_access": "yes",
+                "name": "Du Ruisseau",
+                "network": "REM",
+                "network:wikidata": "Q19582331",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "RUI",
+                "start_date": "2023",
+                "station": "subway",
+                "subway": "yes",
+                "wikidata": "Q3095512"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6902186, 45.5289311]
+            },
+            "id": "node/8223036864"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/8661983919",
+                "light_rail": "yes",
+                "name": "Bois-Franc",
+                "network": "REM",
+                "network:wikidata": "Q19582331",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "BFC",
+                "start_date": "2023",
+                "station": "light_rail",
+                "wikidata": "Q3095495",
+                "wikipedia": "fr:Station Bois-Franc"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.7125138, 45.5220437]
+            },
+            "id": "node/8661983919"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/8661983920",
+                "name": "Pierrefonds-Roxboro",
+                "network": "REM",
+                "network:wikidata": "Q19582331",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "ROX",
+                "start_date": "2022",
+                "station": "subway",
+                "subway": "yes",
+                "wikidata": "Q3095538"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.8119219, 45.5097433]
+            },
+            "id": "node/8661983920"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/8665496409",
+                "name": "Sunnybrooke",
+                "network": "REM",
+                "network:wikidata": "Q19582331",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "SUN",
+                "start_date": "2022",
+                "station": "subway",
+                "subway": "yes",
+                "wikidata": "Q3095560"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.7857006, 45.5038395]
+            },
+            "id": "node/8665496409"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/11956377680",
+                "light_rail": "yes",
+                "name": "Édouard-Montpetit",
+                "network": "REM",
+                "operator": "Pulsar",
+                "public_transport": "station",
+                "railway": "station",
+                "ref": "EDM",
+                "station": "light_rail"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6120612, 45.5103737]
+            },
+            "id": "node/11956377680"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/13320477990",
+                "light_rail": "yes",
+                "name": "Côte-de-Liesse",
+                "network": "REM",
+                "public_transport": "stop_position",
+                "railway": "stop"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6618012, 45.5218271]
+            },
+            "id": "node/13320477990"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "node/13320477991",
+                "light_rail": "yes",
+                "name": "Côte-de-Liesse",
+                "network": "REM",
+                "public_transport": "stop_position",
+                "railway": "stop"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6618359, 45.5217957]
+            },
+            "id": "node/13320477991"
+        }
+    ]
+}

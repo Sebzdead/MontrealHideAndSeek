@@ -2,56 +2,24 @@ import type { Feature, FeatureCollection } from "geojson";
 
 import {
     adjustPerMatching,
-    hiderifyMatching,
     matchingPlanningPolygon,
 } from "./questions/matching";
 import {
     adjustPerMeasuring,
-    hiderifyMeasuring,
     measuringPlanningPolygon,
 } from "./questions/measuring";
-import {
-    adjustPerRadius,
-    hiderifyRadius,
-    radiusPlanningPolygon,
-} from "./questions/radius";
+import { adjustPerRadius, radiusPlanningPolygon } from "./questions/radius";
 import {
     adjustPerTentacle,
-    hiderifyTentacles,
     tentaclesPlanningPolygon,
 } from "./questions/tentacles";
 import {
     adjustPerThermometer,
-    hiderifyThermometer,
     thermometerPlanningPolygon,
 } from "./questions/thermometer";
 import type { Question, Questions } from "./schema";
 
 export * from "./geo-utils";
-
-export const hiderifyQuestion = async (question: Question) => {
-    if (question.data.drag) {
-        switch (question.id) {
-            case "radius":
-                question.data = hiderifyRadius(question.data);
-                break;
-            case "thermometer":
-                question.data = await hiderifyThermometer(question.data);
-                break;
-            case "tentacles":
-                question.data = await hiderifyTentacles(question.data);
-                break;
-            case "matching":
-                question.data = await hiderifyMatching(question.data);
-                break;
-            case "measuring":
-                question.data = await hiderifyMeasuring(question.data);
-                break;
-        }
-    }
-
-    return question;
-};
 
 export const determinePlanningPolygon = async (
     question: Question,

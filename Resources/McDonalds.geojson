@@ -1,0 +1,1913 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-04-20T05:05:07Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/16730067",
+        "addr:housenumber": "1016",
+        "addr:street": "Rue de la Montagne",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "retail",
+        "building:levels": "4",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "indoor_seating": "yes",
+        "name": "McDonald's",
+        "outdoor_seating": "no",
+        "roof:levels": "0",
+        "roof:shape": "flat",
+        "takeaway": "yes",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5710085,
+          45.4956535
+        ]
+      },
+      "id": "relation/16730067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46842674",
+        "addr:housenumber": "7101",
+        "addr:postcode": "H1M 2W2",
+        "addr:province": "QC",
+        "addr:street": "Boulevard des Galeries-d'Anjou",
+        "addr:suburb": "Mercier-Hochelaga-Maisonneuve",
+        "amenity": "fast_food",
+        "attribution": "Natural Resources Canada",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "yes",
+        "canvec:CODE": "2010252",
+        "canvec:UUID": "11CF45291842E5F4E0409C8467120387",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "layer": "1",
+        "name": "McDonald's",
+        "phone": "+1 514 351 6195",
+        "source": "CanVec_Import_2009",
+        "takeaway": "yes",
+        "website": "www.mcdonalds.ca",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.559891,
+          45.5967209
+        ]
+      },
+      "id": "way/46842674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/160534906",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "yes",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "indoor_seating": "yes",
+        "name": "McDonald's",
+        "outdoor_seating": "yes",
+        "source": "local_knowledge",
+        "takeaway": "yes",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5595866,
+          45.540392
+        ]
+      },
+      "id": "way/160534906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/314358084",
+        "addr:housenumber": "6025",
+        "addr:postcode": "H3S 1Z9",
+        "addr:street": "Chemin de la Côte-des-Neiges",
+        "addr:suburb": "Côte-des-Neiges–NDG",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "retail",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 341 6137",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6311442,
+          45.5006871
+        ]
+      },
+      "id": "way/314358084"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/415858065",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "yes",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "takeaway": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7042715,
+          45.4957214
+        ]
+      },
+      "id": "way/415858065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1021815171",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "indoor": "room",
+        "level": "-2",
+        "name": "McDonald's",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5724024,
+          45.5018991
+        ]
+      },
+      "id": "way/1021815171"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1057459472",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2024-06-30",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.569424,
+          45.503352
+        ]
+      },
+      "id": "node/1057459472"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1058291742",
+        "addr:housenumber": "6501",
+        "addr:postcode": "H2S 2M5",
+        "addr:province": "QC",
+        "addr:street": "Rue Saint-Hubert",
+        "addr:suburb": "Rosemont-Petite-Patrie",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2024-07-19",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "payment:interac": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "phone": "+1 514 278 1088",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.com/ca/fr-ca/location/montr-al/plaza-st-hubert/6501-rue-saint-hubert/13761.html",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6031207,
+          45.5362599
+        ]
+      },
+      "id": "node/1058291742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1068294976",
+        "addr:housenumber": "1500",
+        "addr:postcode": "H3Z 1X5",
+        "addr:province": "QC",
+        "addr:street": "Avenue Atwater",
+        "addr:suburb": "Wesmount",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "level": "0",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "phone": "+1 514 935 8560",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.com/ca/en-ca/location/montr-al/atwater-relo/mall-1500-av-atwater/40010.html",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5849556,
+          45.489283
+        ]
+      },
+      "id": "node/1068294976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1144973373",
+        "addr:city": "Pierrefonds",
+        "addr:housenumber": "11680",
+        "addr:postcode": "H8Y 3C9",
+        "addr:province": "Québec",
+        "addr:street": "Boulevard des Sources",
+        "addr:suburb": "Pierrefonds-Roxboro",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1-514-684-0779",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8206924,
+          45.5060304
+        ]
+      },
+      "id": "node/1144973373"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1216087975",
+        "addr:city": "Montréal",
+        "addr:housenumber": "7570",
+        "addr:postcode": "H4P 2N1",
+        "addr:province": "Québec",
+        "addr:street": "Boulevard Décarie",
+        "addr:suburb": "Mont-Royal",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "yes",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1-514-738-4133",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6560779,
+          45.4950578
+        ]
+      },
+      "id": "way/1216087975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1248513030",
+        "addr:housenumber": "5090",
+        "addr:postcode": "H1S 2V7",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Métropolitain Est",
+        "addr:suburb": "Saint-Leonard",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "yes",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 374 5333",
+        "takeaway": "yes",
+        "website": "www.mcdonalds.ca",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5905243,
+          45.5795855
+        ]
+      },
+      "id": "way/1248513030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1248601148",
+        "addr:city": "Montréal",
+        "addr:housenumber": "6415",
+        "addr:postcode": "H1N 1C5",
+        "addr:province": "Québec",
+        "addr:street": "Rue Sherbrooke Est",
+        "addr:suburb": "Mercier-Hochelaga-Maisonneuve",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "yes",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "name": "McDonald's",
+        "phone": "+1 514 252 1318",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.ca/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5446156,
+          45.5808832
+        ]
+      },
+      "id": "way/1248601148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1299821532",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2023-03-04",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "indoor_seating": "yes",
+        "name": "McDonald's",
+        "outdoor_seating": "no",
+        "payment:interac": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5510777,
+          45.5332613
+        ]
+      },
+      "id": "node/1299821532"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1307308156",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5669497,
+          45.5006024
+        ]
+      },
+      "id": "node/1307308156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1427593067",
+        "addr:housenumber": "8300",
+        "addr:postcode": "H8N 1X9",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Newman",
+        "addr:suburb": "LaSalle",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "phone": "+1 514 365 1223",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6282287,
+          45.4333097
+        ]
+      },
+      "id": "node/1427593067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1429426273",
+        "addr:housenumber": "1647",
+        "addr:street": "Rue Saint-Denis",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2024-06-19",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "internet_access": "wlan",
+        "level": "0",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5633575,
+          45.5151962
+        ]
+      },
+      "id": "node/1429426273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1433218559",
+        "addr:housenumber": "1021F",
+        "addr:postcode": "H4N 1J8",
+        "addr:province": "QC",
+        "addr:street": "Rue du Marché Central",
+        "addr:suburb": "Saint-Laurent",
+        "amenity": "fast_food",
+        "branch": "Marché Central",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "phone": "+1 514 383 2121",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.659864,
+          45.5346859
+        ]
+      },
+      "id": "node/1433218559"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1768238777",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6879018,
+          45.4363939
+        ]
+      },
+      "id": "node/1768238777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1924788557",
+        "addr:city": "Dollard-Des Ormeaux",
+        "addr:housenumber": "3600",
+        "addr:postcode": "H9G 1X1",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Saint-Jean",
+        "addr:suburb": "Dollard-des-Ormeaux",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 626 1223",
+        "takeaway": "yes",
+        "website": "www.mcdonalds.ca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8329982,
+          45.4707428
+        ]
+      },
+      "id": "node/1924788557"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1934476262",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8595043,
+          45.4501735
+        ]
+      },
+      "id": "node/1934476262"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2424892854",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "source": "local_knowledge",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.558446,
+          45.5157351
+        ]
+      },
+      "id": "node/2424892854"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2481906170",
+        "addr:housenumber": "2530",
+        "addr:postcode": "H1Y 1V8",
+        "addr:province": "QC",
+        "addr:street": "Rue Masson",
+        "addr:suburb": "Rosemont-Petite-Patrie",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2026-03-29",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "indoor_seating": "yes",
+        "internet_access": "wlan",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Su 00:00-24:00",
+        "outdoor_seating": "yes",
+        "phone": "+1 514 525 1220",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5774681,
+          45.5433655
+        ]
+      },
+      "id": "node/2481906170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360539",
+        "addr:city": "Saint-Léonard",
+        "addr:housenumber": "8005",
+        "addr:postcode": "H1P 2X6",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Langelier",
+        "addr:suburb": "Saint-Leonard",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "delivery": "yes",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "outdoor_seating": "yes",
+        "phone": "+1 514 327-8773",
+        "smoking": "no",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.com/ca/en-ca.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.580898,
+          45.5950149
+        ]
+      },
+      "id": "node/2496360539"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360548",
+        "addr:country": "CA",
+        "addr:housenumber": "10333",
+        "addr:postcode": "H1H 3Z7",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Pie-IX",
+        "addr:suburb": "Montréal-Nord",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "contact:phone": "+1-514-323-2713",
+        "contact:website": "http://www.mcdonalds.ca/",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "outdoor_seating": "yes",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6322961,
+          45.5865812
+        ]
+      },
+      "id": "node/2496360548"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360549",
+        "addr:city": "Montréal",
+        "addr:housenumber": "7275",
+        "addr:postcode": "H1N 1E9",
+        "addr:province": "Québec",
+        "addr:street": "Rue Sherbrooke Est",
+        "addr:suburb": "Mercier-Hochelaga-Maisonneuve",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1-514-351-8354",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.com/ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5440409,
+          45.5922757
+        ]
+      },
+      "id": "node/2496360549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360550",
+        "addr:city": "Montréal",
+        "addr:housenumber": "8235",
+        "addr:postcode": "H1L 3L2",
+        "addr:province": "Québec",
+        "addr:street": "Rue Notre-Dame Est",
+        "addr:suburb": "Mercier-Hochelaga-Maisonneuve",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 493 8404",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.511125,
+          45.5930142
+        ]
+      },
+      "id": "node/2496360550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360551",
+        "addr:housenumber": "9375",
+        "addr:postcode": "H1R 2B7",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Lacordaire",
+        "addr:suburb": "Saint-Leonard",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "delivery": "no",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1-514-322-9143",
+        "smoking": "no",
+        "takeaway": "yes",
+        "website": "www.mcdonalds.ca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6112737,
+          45.5992177
+        ]
+      },
+      "id": "node/2496360551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360553",
+        "addr:country": "CA",
+        "addr:housenumber": "7995",
+        "addr:postcode": "H1E 1N9",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Henri Bourassa Est",
+        "addr:suburb": "RDP-Pointe-Aux-Trembles",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 881 6012",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5825283,
+          45.6253197
+        ]
+      },
+      "id": "node/2496360553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360554",
+        "addr:housenumber": "7685",
+        "addr:postcode": "H1E 5M9",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Maurice-Duplessis",
+        "addr:suburb": "RDP-Pointe-Aux-Trembles",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 643 2892",
+        "takeaway": "yes",
+        "website": "www.mcdonalds.ca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5949811,
+          45.6280099
+        ]
+      },
+      "id": "node/2496360554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496360555",
+        "addr:country": "CA",
+        "addr:housenumber": "12090",
+        "addr:postcode": "H1B 1C8",
+        "addr:province": "QC",
+        "addr:street": "Rue Sherbrooke Est",
+        "addr:suburb": "Montreal-Est",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "internet_access:operator": "Île Sans Fil",
+        "name": "McDonald's",
+        "phone": "+1 514 645 1767",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5132055,
+          45.6442859
+        ]
+      },
+      "id": "node/2496360555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496535290",
+        "addr:housenumber": "7645",
+        "addr:postcode": "H2A 3M4",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Saint-Michel",
+        "addr:suburb": "Villeray-Saint-Michel-PE",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 722 2999",
+        "takeaway": "yes",
+        "website": "www.mcdonalds.ca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6041331,
+          45.5616413
+        ]
+      },
+      "id": "node/2496535290"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496896411",
+        "addr:housenumber": "1300",
+        "addr:postcode": "H3P 3E5",
+        "addr:province": "QC",
+        "addr:street": "Avenue Beaumont",
+        "addr:suburb": "Mont-Royal",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 738 7243",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6253881,
+          45.520423
+        ]
+      },
+      "id": "node/2496896411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496896424",
+        "addr:housenumber": "405",
+        "addr:postcode": "H3N 1P9",
+        "addr:province": "QC",
+        "addr:street": "Rue Jean Talon Ouest",
+        "addr:suburb": "Ahuntsic-Cartierville",
+        "amenity": "fast_food",
+        "automatic_door": "yes",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "entrance": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "phone": "+1 514 276 5551",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "bad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6230278,
+          45.5295869
+        ]
+      },
+      "id": "node/2496896424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2496896437",
+        "addr:housenumber": "1275",
+        "addr:postcode": "H2S 3L9",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Rosemont",
+        "addr:suburb": "Rosemont-Petite-Patrie",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2023-08-20",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "payment:interac": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "phone": "+1 514 277 4385",
+        "takeaway": "yes",
+        "website": "www.mcdonalds.ca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5937312,
+          45.5367481
+        ]
+      },
+      "id": "node/2496896437"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2500160350",
+        "addr:city": "Saint-Laurent",
+        "addr:country": "CA",
+        "addr:housenumber": "1565",
+        "addr:postcode": "H4L 2A1",
+        "addr:province": "QC",
+        "addr:street": "Boulevard de la Côte-Vertu",
+        "addr:suburb": "Saint-Laurent",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Su 06:00-22:00",
+        "opening_hours:drive_through": "24/7",
+        "phone": "+1 514 336 9489",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6841169,
+          45.5133909
+        ]
+      },
+      "id": "node/2500160350"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2500240167",
+        "addr:housenumber": "7270",
+        "addr:postcode": "H4B 1W1",
+        "addr:province": "QC",
+        "addr:street": "Rue Saint-Jacques Ouest",
+        "addr:suburb": "Côte-des-Neiges–NDG",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 482 9930",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6332496,
+          45.4544861
+        ]
+      },
+      "id": "node/2500240167"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2500240177",
+        "addr:housenumber": "5011",
+        "addr:postcode": "H3Z 1H5",
+        "addr:province": "QC",
+        "addr:street": "Rue Sherbrooke Ouest",
+        "addr:suburb": "Westmount",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 487 1981",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6059174,
+          45.4771402
+        ]
+      },
+      "id": "node/2500240177"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2510829992",
+        "addr:city": "Montréal",
+        "addr:housenumber": "5252",
+        "addr:postcode": "H3T 1X8",
+        "addr:province": "Québec",
+        "addr:street": "Chemin de la Côte-des-Neiges",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "name1": "McDonald's Cote-De-Neiges II",
+        "outdoor_seating": "seasonal",
+        "takeaway": "yes",
+        "toilets:wheelchair": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6216747,
+          45.4958759
+        ]
+      },
+      "id": "node/2510829992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3066902508",
+        "addr:city": "Dollard-Des Ormeaux",
+        "addr:country": "CA",
+        "addr:housenumber": "3065",
+        "addr:postcode": "H9B 1Z6",
+        "addr:province": "QC",
+        "addr:street": "Boulevard des Sources",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2023-07-22",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7928974,
+          45.4820398
+        ]
+      },
+      "id": "node/3066902508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3139279326",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2025-09-01",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "internet_access": "wlan",
+        "name": "McDonald's",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5558523,
+          45.5061396
+        ]
+      },
+      "id": "node/3139279326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3485483731",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "level": "0",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5648766,
+          45.5083288
+        ]
+      },
+      "id": "node/3485483731"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3798453614",
+        "addr:city": "Montréal",
+        "addr:housenumber": "215",
+        "addr:street": "Rue Peel",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:fr": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "fr:McDonald's",
+        "check_date": "2025-09-09",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "indoor_seating": "yes",
+        "level": "0",
+        "name": "McDonald's",
+        "name:fr": "McDonald's",
+        "opening_hours": "24/7",
+        "outdoor_seating": "no",
+        "smoking": "no",
+        "takeaway": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.558366,
+          45.4938009
+        ]
+      },
+      "id": "node/3798453614"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4466015461",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6469679,
+          45.5659943
+        ]
+      },
+      "id": "node/4466015461"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5247570028",
+        "addr:city": "Montréal",
+        "addr:housenumber": "2020",
+        "addr:street": "Rue De Salaberry",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7005822,
+          45.5366231
+        ]
+      },
+      "id": "node/5247570028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6156521236",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6536357,
+          45.466262
+        ]
+      },
+      "id": "node/6156521236"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7357120735",
+        "addr:housenumber": "44",
+        "addr:postcode": "H9W 5Z6",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Saint-Charles",
+        "addr:suburb": "Beaconsfield",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 694 3427",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.ca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8469023,
+          45.4322661
+        ]
+      },
+      "id": "node/7357120735"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7379832303",
+        "addr:city": "Montréal",
+        "addr:housenumber": "7275",
+        "addr:postcode": "H2R 1W5",
+        "addr:province": "Québec",
+        "addr:street": "Boulevard Saint-Laurent",
+        "addr:suburb": "Villeray-Saint-Michel-PE",
+        "air_conditioning": "yes",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "check_date": "2023-03-04",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "indoor_seating": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "outdoor_seating": "no",
+        "payment:interac": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "phone": "+1 514 276 6878",
+        "smoking": "no",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6193769,
+          45.535565
+        ]
+      },
+      "id": "node/7379832303"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7414918760",
+        "addr:housenumber": "3026",
+        "addr:postcode": "H4C 1P1",
+        "addr:province": "QC",
+        "addr:street": "Rue Notre-Dame Ouest",
+        "addr:suburb": "Le Sud Ouest",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "phone": "+1 514 846 3766",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5785365,
+          45.4807138
+        ]
+      },
+      "id": "node/7414918760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7433945761",
+        "addr:city": "Montréal",
+        "addr:housenumber": "10400",
+        "addr:province": "QC",
+        "addr:street": "Rue Lajeunesse",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "name": "McDonald's",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6636196,
+          45.5536509
+        ]
+      },
+      "id": "node/7433945761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7439829570",
+        "addr:housenumber": "4300",
+        "addr:postcode": "H4G 2A8",
+        "addr:street": "Boulevard LaSalle",
+        "addr:suburb": "Verdun",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 767 7924",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5627573,
+          45.4607507
+        ]
+      },
+      "id": "node/7439829570"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8026820151",
+        "addr:city": "LaSalle",
+        "addr:housenumber": "6797",
+        "addr:postcode": "H8N 3E4",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Newman",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "contact:phone": "+1-514-364-5282",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Fr 10:30-20:00; Sa-Su 10:30-17:00",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6102157,
+          45.4518324
+        ]
+      },
+      "id": "node/8026820151"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8026868774",
+        "addr:city": "Montréal-Nord",
+        "addr:housenumber": "6140",
+        "addr:postcode": "H1G 5X3",
+        "addr:province": "Québec",
+        "addr:street": "Boulevard Henri-Bourassa Est",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "contact:phone": "+1-514-321-0467",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Fr 10:30-20:00; Sa-Su 10:30-17:00",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6134244,
+          45.6057413
+        ]
+      },
+      "id": "node/8026868774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8026868775",
+        "addr:city": "Saint-Léonard",
+        "addr:housenumber": "7445",
+        "addr:postcode": "H1S 1V9",
+        "addr:province": "QC",
+        "addr:street": "Boulevard Langelier",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "contact:phone": "+1-514-252-1105",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Fr 10:30-19:00; Sa-Su 10:30-16:30",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5723251,
+          45.5925543
+        ]
+      },
+      "id": "node/8026868775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8032816992",
+        "addr:city": "Montréal",
+        "addr:housenumber": "2010",
+        "addr:postcode": "H2K 4J4",
+        "addr:province": "Québec",
+        "addr:street": "Avenue Papineau",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "contact:phone": "+1-514-523-0662",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Su 06:00-22:00",
+        "opening_hours:drive_through": "24/7",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5600127,
+          45.5258102
+        ]
+      },
+      "id": "node/8032816992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8032816993",
+        "addr:city": "Montréal",
+        "addr:housenumber": "5",
+        "addr:postcode": "H3B 2G2",
+        "addr:province": "QC",
+        "addr:street": "Place Ville-Marie",
+        "addr:unit": "Local 11296",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "contact:phone": "+1-514-868-0632",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Fr 10:00-18:00",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5687892,
+          45.500765
+        ]
+      },
+      "id": "node/8032816993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8032816994",
+        "addr:city": "Montréal",
+        "addr:housenumber": "800",
+        "addr:postcode": "H4Z 1A1",
+        "addr:province": "QC",
+        "addr:street": "Rue du Square Victoria",
+        "addr:unit": "1",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "contact:phone": "+1-514-874-0550",
+        "cuisine": "burger",
+        "diet:vegetarian": "no",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "opening_hours": "Mo-Fr 06:00-15:30",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5615869,
+          45.5007737
+        ]
+      },
+      "id": "node/8032816994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8229463617",
+        "addr:city": "Pierrefonds",
+        "addr:housenumber": "3882",
+        "addr:postcode": "H9H 3C6",
+        "addr:street": "Boulevard Saint-Charles",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "phone": "+1 514 620 4321",
+        "takeaway": "yes",
+        "website": "http://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8674184,
+          45.4608903
+        ]
+      },
+      "id": "node/8229463617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8739482223",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7483783,
+          45.4484685
+        ]
+      },
+      "id": "node/8739482223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9214817321",
+        "addr:city": "Montréal",
+        "addr:housenumber": "5155",
+        "addr:postcode": "H3W 1X6",
+        "addr:province": "Québec",
+        "addr:street": "Chemin Queen Mary",
+        "addr:suburb": "Côte-des-Neiges–NDG",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "building": "yes",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "McDonald's",
+        "phone": "+1 514 487 1981",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.ca/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6281742,
+          45.4852247
+        ]
+      },
+      "id": "node/9214817321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11438337027",
+        "addr:city": "Lasalle",
+        "addr:postcode": "H8P 1B3",
+        "addr:province": "Québec",
+        "addr:street": "Boulevard Champlain",
+        "amenity": "fast_food",
+        "attribution": "Natural Resources Canada",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "canvec:CODE": "2010252",
+        "cuisine": "burger",
+        "drive_through": "yes",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "source": "CanVec_Import_2009",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6116508,
+          45.4268727
+        ]
+      },
+      "id": "node/11438337027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12003570043",
+        "addr:housenumber": "4494",
+        "addr:street": "Rue Saint-Denis",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "check_date": "2024-06-23",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "opening_hours": "24/7",
+        "phone": "+1 514 842 0484",
+        "takeaway": "yes",
+        "website": "https://www.mcdonalds.com/ca/fr-ca/location/montr-al/plateau-mont-royal/4494-st-denis/40890.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5829012,
+          45.523768
+        ]
+      },
+      "id": "node/12003570043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12916701243",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "cuisine": "burger",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5708887,
+          45.4957615
+        ]
+      },
+      "id": "node/12916701243"
+    }
+  ]
+}

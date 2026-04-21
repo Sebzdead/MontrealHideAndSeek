@@ -17,6 +17,7 @@ import {
     OVERPASS_API,
     OVERPASS_API_FALLBACK,
 } from "./constants";
+import { fetchLocalLandmarks } from "./landmarks";
 import type {
     EncompassingTentacleQuestionSchema,
     HomeGameMatchingQuestions,
@@ -362,6 +363,19 @@ export const findPlacesSpecificInZone = async (
 export const nearestToQuestion = async (
     question: HomeGameMatchingQuestions | HomeGameMeasuringQuestions,
 ) => {
+    if (
+        ["airport", "hospital", "university", "river", "park"].includes(
+            question.type,
+        )
+    ) {
+        const points = await fetchLocalLandmarks(question.type);
+        const questionPoint = turf.point([question.lng, question.lat]);
+        return turf.nearestPoint(
+            questionPoint,
+            turf.featureCollection(points) as any,
+        );
+    }
+
     let radius = 30;
     let instances: any = { features: [] };
     while (instances.features.length === 0) {
@@ -370,9 +384,9 @@ export const nearestToQuestion = async (
                 lat: question.lat,
                 lng: question.lng,
                 radius: radius,
-                unit: "miles",
+                unit: "kilometers",
                 location: false,
-                locationType: question.type,
+                locationType: question.type as any,
                 drag: false,
                 color: "black",
                 collapsed: false,
@@ -380,6 +394,7 @@ export const nearestToQuestion = async (
             "Finding matching locations...",
         );
         radius += 30;
+        if (radius > 1000) break; // Safety break
     }
     const questionPoint = turf.point([question.lng, question.lat]);
     return turf.nearestPoint(questionPoint, instances as any);

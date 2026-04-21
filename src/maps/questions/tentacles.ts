@@ -1,9 +1,7 @@
 import * as turf from "@turf/turf";
 
-import { hiderMode } from "@/lib/context";
 import { findTentacleLocations } from "@/maps/api";
-import { arcBuffer, safeUnion } from "@/maps/geo-utils";
-import { geoSpatialVoronoi } from "@/maps/geo-utils";
+import { arcBuffer, geoSpatialVoronoi, safeUnion } from "@/maps/geo-utils";
 import type { TentacleQuestion, Units } from "@/maps/schema";
 
 const filterPointsWithinRadius = (
@@ -89,62 +87,6 @@ export const adjustPerTentacle = async (
     );
 };
 
-export const hiderifyTentacles = async (question: TentacleQuestion) => {
-    const $hiderMode = hiderMode.get();
-    if ($hiderMode === false) {
-        return question;
-    }
-
-    const rawPoints =
-        question.locationType === "custom"
-            ? turf.featureCollection(question.places)
-            : await findTentacleLocations(question);
-
-    const points =
-        question.locationType === "custom"
-            ? filterPointsWithinRadius(
-                  rawPoints,
-                  question.lng,
-                  question.lat,
-                  question.radius,
-                  question.unit,
-              )
-            : rawPoints;
-
-    const voronoi = geoSpatialVoronoi(points);
-
-    const hider = turf.point([$hiderMode.longitude, $hiderMode.latitude]);
-    const location = turf.point([question.lng, question.lat]);
-
-    if (
-        turf.distance(hider, location, { units: question.unit }) >
-        question.radius
-    ) {
-        question.location = false;
-        return question;
-    }
-
-    let correctLocation: any = null;
-
-    const correctPolygon = voronoi.features.find(
-        (feature: any, index: number) => {
-            const pointIn =
-                turf.booleanPointInPolygon(hider, feature.geometry) || false;
-
-            if (pointIn) {
-                correctLocation = points.features[index];
-            }
-            return pointIn;
-        },
-    );
-
-    if (!correctPolygon) {
-        return question;
-    }
-
-    question.location = correctLocation!;
-    return question;
-};
 
 export const tentaclesPlanningPolygon = async (question: TentacleQuestion) => {
     const rawPoints =

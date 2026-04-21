@@ -1,0 +1,533 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.588787, 45.4969179, 0]
+            },
+            "properties": {
+                "name": "Montréal General Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6300101, 45.4974933, 0]
+            },
+            "properties": {
+                "name": "Jewish General Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6015785, 45.4732623, 0]
+            },
+            "properties": {
+                "name": "Royal Victoria Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.609411, 45.5459821, 0]
+            },
+            "properties": {
+                "name": "Jean Talon Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.563649, 45.4638829, 0]
+            },
+            "properties": {
+                "name": "Verdun Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5575726, 45.5115568, 0]
+            },
+            "properties": {
+                "name": "CHUM - Centre hospitalier de l'Université de Montréal",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5584936, 45.574133, 0]
+            },
+            "properties": {
+                "name": "Maisonneuve-Rosemont Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.609411, 45.5459821, 0]
+            },
+            "properties": {
+                "name": "Jean Talon Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5627179, 45.5255337, 0]
+            },
+            "properties": {
+                "name": "Hôpital Notre-Dame",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5813729, 45.5089963, 0]
+            },
+            "properties": {
+                "name": "The Neuro. Montreal Neurological Institute-Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6499032, 45.5718874, 0]
+            },
+            "properties": {
+                "name": "Fleury Hospital",
+                "styleUrl": "#icon-1899-A52714-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-1.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.631504, 45.50524, 0]
+            },
+            "properties": {
+                "name": "Martin-Luther-King Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6286345, 45.5354984, 0]
+            },
+            "properties": {
+                "name": "Parc Jarry",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5703556, 45.5273219, 0]
+            },
+            "properties": {
+                "name": "La Fontaine Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5874847, 45.5319443, 0]
+            },
+            "properties": {
+                "name": "Sir-Wilfrid-Laurier Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5932179, 45.5015664, 0]
+            },
+            "properties": {
+                "name": "Mount Royal Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5986788, 45.4808977, 0]
+            },
+            "properties": {
+                "name": "Parc Westmount",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5612674, 45.4651901, 0]
+            },
+            "properties": {
+                "name": "Parc Arthur-Therrien",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5338306, 45.5139952, 0]
+            },
+            "properties": {
+                "name": "Parc Jean-Drapeau",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5512185, 45.5565024, 0]
+            },
+            "properties": {
+                "name": "Montreal Olympic Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5553489, 45.5086626, 0]
+            },
+            "properties": {
+                "name": "Le Champ-de-Mars",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.665509, 45.554971, 0]
+            },
+            "properties": {
+                "name": "Ahuntsic Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6006, 45.562417, 0]
+            },
+            "properties": {
+                "name": "François-Perrault Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6505395, 45.5476128, 0]
+            },
+            "properties": {
+                "name": "Henri Julien Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.601732, 45.4445195, 0]
+            },
+            "properties": {
+                "name": "Parc Angrignon",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5565299, 45.526805, 0]
+            },
+            "properties": {
+                "name": "Faubourgs Park",
+                "styleUrl": "#icon-1899-558B2F-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-2.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5779128, 45.4948363, 0]
+            },
+            "properties": {
+                "name": "Concordia University",
+                "styleUrl": "#icon-1899-F57C00-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-3.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5602937, 45.5131547, 0]
+            },
+            "properties": {
+                "name": "University of Quebec in Montreal",
+                "styleUrl": "#icon-1899-F57C00-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-3.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6137592, 45.5056156, 0]
+            },
+            "properties": {
+                "name": "University of Montreal",
+                "styleUrl": "#icon-1899-F57C00-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-3.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.6697845, 45.5762128, 0]
+            },
+            "properties": {
+                "name": "Prairies River",
+                "styleUrl": "#icon-1899-0288D1-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-4.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5152081, 45.5518457, 0]
+            },
+            "properties": {
+                "name": "Saint Lawrence River",
+                "styleUrl": "#icon-1899-0288D1-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-4.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.745484, 45.4657019, 0]
+            },
+            "properties": {
+                "name": "Montréal-Pierre Elliott Trudeau International Airport",
+                "styleUrl": "#icon-1899-000000-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-5.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.4092875, 45.5139987, 0]
+            },
+            "properties": {
+                "name": "Montreal Metropolitan Airport",
+                "styleUrl": "#icon-1899-000000-nodesc",
+                "label-scale": 0,
+                "icon-scale": 1,
+                "icon-offset": [32, 64],
+                "icon-offset-units": ["pixels", "insetPixels"],
+                "icon": "images/icon-5.png"
+            }
+        }
+    ]
+}

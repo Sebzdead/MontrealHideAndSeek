@@ -66,11 +66,11 @@ export const AddQuestionDialog = ({
             id: "tentacles",
             data: defaultCustomQuestions.get()
                 ? {
-                      lat: center.lat,
-                      lng: center.lng,
-                      locationType: "custom",
-                      places: [],
-                  }
+                    lat: center.lat,
+                    lng: center.lng,
+                    locationType: "custom",
+                    places: [],
+                }
                 : { lat: center.lat, lng: center.lng },
         });
         return true;
@@ -114,8 +114,8 @@ export const AddQuestionDialog = ({
                     const parsed = JSON.parse(text);
                     const question =
                         parsed &&
-                        typeof parsed === "object" &&
-                        !Array.isArray(parsed)
+                            typeof parsed === "object" &&
+                            !Array.isArray(parsed)
                             ? { ...parsed, key: Math.random() }
                             : parsed;
 
@@ -140,9 +140,6 @@ export const AddQuestionDialog = ({
             <DialogTrigger asChild>{children}</DialogTrigger>
             <DialogContent>
                 <DialogTitle>Add Question</DialogTitle>
-                <DialogDescription>
-                    Select which question type you would like to add.
-                </DialogDescription>
 
                 <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
                     <SidebarMenuButton

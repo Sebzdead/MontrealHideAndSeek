@@ -7,7 +7,6 @@ import { Marker } from "react-leaflet";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
     autoSave,
-    hiderMode,
     questionModified,
     questions,
     save,
@@ -15,7 +14,6 @@ import {
 } from "@/lib/context";
 import type { ICON_COLORS } from "@/maps/api";
 
-import { LatitudeLongitude } from "./LatLngPicker";
 import {
     MatchingQuestionComponent,
     MeasuringQuestionComponent,
@@ -24,7 +22,6 @@ import {
     ThermometerQuestionComponent,
 } from "./QuestionCards";
 import { Button } from "./ui/button";
-import { SidebarMenu } from "./ui/sidebar-l";
 
 let isDragging = false;
 
@@ -44,7 +41,6 @@ const ColoredMarker = ({
     sub?: string;
 }) => {
     const $questions = useStore(questions);
-    const $hiderMode = useStore(hiderMode);
     const $autoSave = useStore(autoSave);
     const [open, setOpen] = useState(false);
 
@@ -84,28 +80,10 @@ const ColoredMarker = ({
                 }}
             />
             <DialogContent className="!bg-[hsl(var(--sidebar-background))] !text-white">
-                {questionKey === -1 && $hiderMode !== false && (
-                    <>
-                        <h2 className="text-center text-2xl font-bold font-poppins">
-                            {sub}
-                        </h2>
-                        <SidebarMenu>
-                            <LatitudeLongitude
-                                latitude={$hiderMode.latitude}
-                                longitude={$hiderMode.longitude}
-                                inlineEdit
-                                onChange={(latitude, longitude) => {
-                                    hiderMode.set({
-                                        latitude:
-                                            latitude ?? $hiderMode.latitude,
-                                        longitude:
-                                            longitude ?? $hiderMode.longitude,
-                                    });
-                                }}
-                                label="Hider Location"
-                            />
-                        </SidebarMenu>
-                    </>
+                {questionKey === -1 && (
+                    <p className="text-center text-sm text-muted-foreground">
+                        GPS location is tracked automatically in Hider Mode.
+                    </p>
                 )}
                 {$questions
                     .filter((q) => q.key === questionKey)
@@ -161,15 +139,9 @@ const ColoredMarker = ({
                         }
                     })}
                 {questionKey === -1 && (
-                    <Button // If it's the hider mode marker
-                        onClick={() => {
-                            hiderMode.set(false);
-                        }}
-                        variant="destructive"
-                        className="font-semibold font-poppins"
-                    >
-                        Disable
-                    </Button>
+                    <p className="text-xs text-muted-foreground text-center">
+                        GPS is managed in Hider Mode.
+                    </p>
                 )}
                 {!$autoSave && (
                     <button
@@ -187,34 +159,10 @@ const ColoredMarker = ({
 export const DraggableMarkers = () => {
     useStore(triggerLocalRefresh);
     const $questions = useStore(questions);
-    const $hiderMode = useStore(hiderMode);
+
 
     return (
         <Fragment>
-            {$hiderMode !== false && (
-                <ColoredMarker
-                    color="green"
-                    key="hider"
-                    sub="Hider Location"
-                    questionKey={-1}
-                    latitude={$hiderMode.latitude}
-                    longitude={$hiderMode.longitude}
-                    onChange={(e) => {
-                        $hiderMode.latitude =
-                            e.target.getLatLng().lat ?? $hiderMode.latitude;
-                        $hiderMode.longitude =
-                            e.target.getLatLng().lng ?? $hiderMode.longitude;
-
-                        if (autoSave.get()) {
-                            hiderMode.set({
-                                ...$hiderMode,
-                            });
-                        } else {
-                            triggerLocalRefresh.set(Math.random());
-                        }
-                    }}
-                />
-            )}
             {$questions.map((question) => {
                 if (!question.data) return null;
                 if (!question.data.drag) return null;

@@ -1,12 +1,12 @@
 import { useStore } from "@nanostores/react";
-import { distance, point } from "@turf/turf";
+import { bearing, destination, distance, point } from "@turf/turf";
 
 import { LatitudeLongitude } from "@/components/LatLngPicker";
 import { Label } from "@/components/ui/label";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { defaultUnit } from "@/lib/context";
 import {
-    hiderMode,
+    hiderModeEnabled,
     isLoading,
     questionModified,
     questions,
@@ -29,12 +29,13 @@ export const ThermometerQuestionComponent = ({
     className?: string;
 }) => {
     useStore(triggerLocalRefresh);
-    const $hiderMode = useStore(hiderMode);
+    const $hiderMode = useStore(hiderModeEnabled);
     const $questions = useStore(questions);
     const $isLoading = useStore(isLoading);
 
-    const $defaultUnit = useStore(defaultUnit);
-    const DISTANCE_UNIT = $defaultUnit ?? "miles";
+    let rawDefaultUnit = useStore(defaultUnit);
+    if (rawDefaultUnit === ("miles" as any)) rawDefaultUnit = "kilometers";
+    const DISTANCE_UNIT = rawDefaultUnit ?? "kilometers";
 
     const label = `Thermometer
     ${
@@ -58,12 +59,7 @@ export const ThermometerQuestionComponent = ({
           )
         : null;
 
-    const unitLabel =
-        DISTANCE_UNIT === "meters"
-            ? "Meters"
-            : DISTANCE_UNIT === "kilometers"
-              ? "KM"
-              : "Miles";
+    const unitLabel = DISTANCE_UNIT === "meters" ? "Meters" : "KM";
 
     return (
         <QuestionCard
@@ -105,11 +101,63 @@ export const ThermometerQuestionComponent = ({
             />
 
             {distanceValue !== null && (
-                <div className="px-2 text-sm text-muted-foreground">
-                    Distance:{" "}
-                    <span className="font-medium text-foreground">
-                        {distanceValue.toFixed(3)} {unitLabel}
-                    </span>
+                <div className="flex flex-col gap-2 p-2">
+                    <div className="px-1 text-sm text-muted-foreground flex justify-between items-center">
+                        <span>Distance:</span>
+                        <span className="font-medium text-foreground">
+                            {distanceValue.toFixed(3)} {unitLabel}
+                        </span>
+                    </div>
+                    <Label
+                        className={cn(
+                            "font-semibold text-sm mt-1",
+                            $isLoading && "text-muted-foreground",
+                        )}
+                    >
+                        Preset Leaps
+                    </Label>
+                    <ToggleGroup
+                        className="grow flex-wrap justify-start"
+                        type="single"
+                        onValueChange={(value) => {
+                            if (!value) return;
+                            let dt = 200;
+                            let u = "meters";
+                            if (value === "200m") {
+                                dt = 200;
+                                u = "meters";
+                            } else if (value === "500m") {
+                                dt = 500;
+                                u = "meters";
+                            } else if (value === "1km") {
+                                dt = 1;
+                                u = "kilometers";
+                            } else if (value === "3km") {
+                                dt = 3;
+                                u = "kilometers";
+                            }
+
+                            const angle = bearing(
+                                point([data.lngA!, data.latA!]),
+                                point([data.lngB!, data.latB!]),
+                            );
+                            const dest = destination(
+                                point([data.lngA!, data.latA!]),
+                                dt,
+                                angle,
+                                { units: u as any },
+                            );
+                            data.lngB = dest.geometry.coordinates[0];
+                            data.latB = dest.geometry.coordinates[1];
+                            questionModified();
+                        }}
+                        disabled={!data.drag || $isLoading}
+                    >
+                        <ToggleGroupItem value="200m">200m</ToggleGroupItem>
+                        <ToggleGroupItem value="500m">500m</ToggleGroupItem>
+                        <ToggleGroupItem value="1km">1km</ToggleGroupItem>
+                        <ToggleGroupItem value="3km">3km</ToggleGroupItem>
+                    </ToggleGroup>
                 </div>
             )}
 
@@ -129,7 +177,7 @@ export const ThermometerQuestionComponent = ({
                     onValueChange={(value: "warmer" | "colder") =>
                         questionModified((data.warmer = value === "warmer"))
                     }
-                    disabled={!!$hiderMode || !data.drag || $isLoading}
+                    disabled={$hiderMode || !data.drag || $isLoading}
                 >
                     <ToggleGroupItem color="red" value="colder">
                         Colder

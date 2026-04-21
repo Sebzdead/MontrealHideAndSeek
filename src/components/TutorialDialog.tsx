@@ -41,10 +41,10 @@ const tutorialSteps: TutorialStep[] = [
                 powerful tool.
                 <br />
                 <br />
-                This tool is designed for those who have purchased the Jet Lag
-                Hide and Seek Home Game, though it&apos;s not officially
-                affiliated with the creators. It supports over 48 question
-                variations found in the game!
+                This tool is designed for a custom Montreal version of the Hide
+                and Seek Home Game, though it&apos;s not officially affiliate
+                with the creators. It supports over 40 question variations found
+                in the game!
                 <br />
                 <br />
                 If you&apos;re already familiar with the basics, feel free to{" "}
@@ -107,8 +107,7 @@ const tutorialSteps: TutorialStep[] = [
                 <br />
                 <br />
                 <strong>Supported Location Types:</strong>
-                <br />• Cities, towns, and neighborhoods
-                <br />• Administrative regions (countries, states, prefectures)
+                <br />• Administrative regions (countries, states, counties)
                 <br />• Geographic features (islands, parks)
             </>
         ),
@@ -423,7 +422,7 @@ const tutorialSteps: TutorialStep[] = [
                 <br />
                 <strong>Zone-Based Matching:</strong>
                 <br />• <strong>Same Zone:</strong> Administrative regions
-                (prefectures, states, etc.)
+                (states, counties, etc.)
                 <br />• <strong>Same First Letter of Zone:</strong> Zones
                 starting with the same letter
                 <br />• <strong>Zone Levels:</strong> OSM administrative levels
@@ -448,11 +447,10 @@ const tutorialSteps: TutorialStep[] = [
         title: "Matching Questions: Property Comparison (Part 2)",
         content: (
             <>
-                <strong>Full Game Variations (Small/Medium Games):</strong>
+                <strong>Full Game Variations:</strong>
                 <br />
-                These require the game area to be relatively small (alternatives
-                also exist that function with Hiding Zone Mode for larger
-                games):
+                These require answering based on properties of the hider’s
+                location or nearest features:
                 <br />• Aquariums, Zoos, Theme Parks
                 <br />• Mountains, Museums, Hospitals, Cinemas
                 <br />• Libraries, Golf Courses, Foreign Consulates, Parks
@@ -514,7 +512,7 @@ const tutorialSteps: TutorialStep[] = [
                 rail lines (like Shinkansen)
                 <br />
                 <br />
-                <strong>Full Game Variations:</strong>
+                <strong>Standard Game Variations:</strong>
                 <br />
                 Same location types as Matching questions but focused on
                 distance rather than categorization:
@@ -744,7 +742,7 @@ const tutorialSteps: TutorialStep[] = [
         title: "You're Ready to Master Hide and Seek!",
         content: (
             <>
-                Congratulations! You now have comprehensive knowledge of all 48+
+                Congratulations! You now have comprehensive knowledge of all 40+
                 question variations and advanced features in this tool.
                 <br />
                 <br />

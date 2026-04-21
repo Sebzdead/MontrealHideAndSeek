@@ -16,7 +16,7 @@ import {
     customInitPreference,
     displayHidingZones,
     drawingQuestionKey,
-    hiderMode,
+    hiderModeEnabled,
     isLoading,
     questionModified,
     questions,
@@ -45,7 +45,7 @@ export const MeasuringQuestionComponent = ({
     className?: string;
 }) => {
     useStore(triggerLocalRefresh);
-    const $hiderMode = useStore(hiderMode);
+    const $hiderMode = useStore(hiderModeEnabled);
     const $questions = useStore(questions);
     const $displayHidingZones = useStore(displayHidingZones);
     const $drawingQuestionKey = useStore(drawingQuestionKey);
@@ -53,18 +53,16 @@ export const MeasuringQuestionComponent = ({
     const $customInitPref = useStore(customInitPreference);
     const [customDialogOpen, setCustomDialogOpen] = React.useState(false);
     const label = `Measuring
-    ${
-        $questions
+    ${$questions
             .filter((q) => q.id === "measuring")
             .map((q) => q.key)
             .indexOf(questionKey) + 1
-    }`;
+        }`;
 
     let questionSpecific = <></>;
 
     switch (data.type) {
         case "mcdonalds":
-        case "seven11":
             questionSpecific = (
                 <span className="px-2 text-center text-orange-500">
                     This question will eliminate hiding zones that don&apos;t
@@ -74,17 +72,12 @@ export const MeasuringQuestionComponent = ({
                 </span>
             );
             break;
-        case "aquarium":
         case "hospital":
-        case "peak":
         case "museum":
-        case "theme_park":
-        case "zoo":
         case "cinema":
-        case "library":
-        case "golf_course":
-        case "consulate":
         case "park":
+        case "university":
+        case "river":
             questionSpecific = (
                 <span className="px-2 text-center text-orange-500">
                     This question will only influence the map when you click on
@@ -290,7 +283,7 @@ export const MeasuringQuestionComponent = ({
                             (data.hiderCloser = value === "closer"),
                         )
                     }
-                    disabled={!!$hiderMode || !data.drag || $isLoading}
+                    disabled={$hiderMode || !data.drag || $isLoading}
                 >
                     <ToggleGroupItem value="further">
                         Hider Further

@@ -23,20 +23,20 @@ export const mapGeoLocation = persistentAtom<OpenStreetMap>(
     "mapGeoLocation",
     {
         geometry: {
-            coordinates: [36.5748441, 139.2394179],
+            coordinates: [-73.5673, 45.5017],
             type: "Point",
         },
         type: "Feature",
         properties: {
             osm_type: "R",
-            osm_id: 382313,
-            extent: [45.7112046, 122.7141754, 20.2145811, 154.205541],
-            country: "Japan",
+            osm_id: 3430571,
+            extent: [45.4093, -73.9781, 45.7058, -73.4735],
+            country: "Canada",
             osm_key: "place",
-            countrycode: "JP",
-            osm_value: "country",
-            name: "Japan",
-            type: "country",
+            countrycode: "CA",
+            osm_value: "city",
+            name: "Montreal",
+            type: "city",
         },
     },
     {
@@ -87,17 +87,17 @@ export const questionModified = (..._: any[]) => {
 
 export const leafletMapContext = atom<Map | null>(null);
 
-export const defaultUnit = persistentAtom<Units>("defaultUnit", "miles");
-export const hiderMode = persistentAtom<
-    | false
-    | {
-          latitude: number;
-          longitude: number;
-      }
->("isHiderMode", false, {
+export const defaultUnit = persistentAtom<Units>("defaultUnit", "kilometers");
+export const hiderModeEnabled = persistentAtom<boolean>("hiderModeEnabled", false, {
     encode: JSON.stringify,
     decode: JSON.parse,
 });
+/** Live GPS position — updated by watchPosition, never persisted. */
+export const gpsPosition = atom<{ lat: number; lng: number } | null>(null);
+/** Whether the distance-ruler tool is active. */
+export const measureDistanceEnabled = atom<boolean>(false);
+/** The draggable ruler pin coordinates. */
+export const measurePin = atom<{ lat: number; lng: number } | null>(null);
 export const triggerLocalRefresh = atom<number>(0);
 export const displayHidingZones = persistentAtom<boolean>(
     "displayHidingZones",
@@ -175,7 +175,7 @@ export const hidingRadius = persistentAtom<number>("hidingRadius", 0.5, {
 });
 export const hidingRadiusUnits = persistentAtom<Units>(
     "hidingRadiusUnits",
-    "miles",
+    "kilometers",
     {
         encode: JSON.stringify,
         decode: JSON.parse,
@@ -195,11 +195,6 @@ export const autoSave = persistentAtom<boolean>("autoSave", true, {
 });
 export const save = () => {
     questions.set([...questions.get()]);
-    const $hiderMode = hiderMode.get();
-
-    if ($hiderMode !== false) {
-        hiderMode.set({ ...$hiderMode });
-    }
 };
 
 /* Presets for custom questions (savable / sharable / editable) */

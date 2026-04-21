@@ -10,7 +10,7 @@ import {
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { UnitSelect } from "@/components/UnitSelect";
 import {
-    hiderMode,
+    hiderModeEnabled,
     isLoading,
     questionModified,
     questions,
@@ -33,7 +33,7 @@ export const RadiusQuestionComponent = ({
     className?: string;
 }) => {
     useStore(triggerLocalRefresh);
-    const $hiderMode = useStore(hiderMode);
+    const $hiderMode = useStore(hiderModeEnabled);
     const $questions = useStore(questions);
     const $isLoading = useStore(isLoading);
     const label = `Radius
@@ -71,12 +71,62 @@ export const RadiusQuestionComponent = ({
                         }
                     />
                     <UnitSelect
-                        unit={data.unit}
+                        unit={
+                            data.unit === ("miles" as any)
+                                ? "kilometers"
+                                : data.unit
+                        }
                         disabled={!data.drag || $isLoading}
                         onChange={(unit) =>
                             questionModified((data.unit = unit))
                         }
                     />
+                </div>
+                <div className="flex flex-col gap-2 mt-2 px-1">
+                    <Label
+                        className={cn(
+                            "font-semibold text-sm mt-1",
+                            $isLoading && "text-muted-foreground",
+                        )}
+                    >
+                        Preset Leaps
+                    </Label>
+                    <ToggleGroup
+                        className="grow flex-wrap justify-start"
+                        type="single"
+                        onValueChange={(value) => {
+                            if (!value) return;
+                            let dt = 200;
+                            let u = "meters";
+                            if (value === "200m") {
+                                dt = 200;
+                                u = "meters";
+                            } else if (value === "500m") {
+                                dt = 500;
+                                u = "meters";
+                            } else if (value === "1km") {
+                                dt = 1;
+                                u = "kilometers";
+                            } else if (value === "3km") {
+                                dt = 3;
+                                u = "kilometers";
+                            } else if (value === "5km") {
+                                dt = 5;
+                                u = "kilometers";
+                            }
+
+                            data.radius = dt;
+                            data.unit = u as any;
+                            questionModified();
+                        }}
+                        disabled={!data.drag || $isLoading}
+                    >
+                        <ToggleGroupItem value="200m">200m</ToggleGroupItem>
+                        <ToggleGroupItem value="500m">500m</ToggleGroupItem>
+                        <ToggleGroupItem value="1km">1km</ToggleGroupItem>
+                        <ToggleGroupItem value="3km">3km</ToggleGroupItem>
+                        <ToggleGroupItem value="5km">5km</ToggleGroupItem>
+                    </ToggleGroup>
                 </div>
             </SidebarMenuItem>
             <LatitudeLongitude
@@ -110,7 +160,7 @@ export const RadiusQuestionComponent = ({
                     onValueChange={(value: "inside" | "outside") =>
                         questionModified((data.within = value === "inside"))
                     }
-                    disabled={!!$hiderMode || !data.drag || $isLoading}
+                    disabled={$hiderMode || !data.drag || $isLoading}
                 >
                     <ToggleGroupItem value="outside">Outside</ToggleGroupItem>
                     <ToggleGroupItem value="inside">Inside</ToggleGroupItem>
