@@ -1,7 +1,6 @@
 import * as turf from "@turf/turf";
-import type { Feature, FeatureCollection, MultiPolygon, Point, Polygon } from "geojson";
+import type { FeatureCollection, MultiPolygon, Polygon } from "geojson";
 import _ from "lodash";
-import osmtogeojson from "osmtogeojson";
 import { toast } from "react-toastify";
 
 import {

@@ -4,18 +4,16 @@ import React from "react";
 import { toast } from "react-toastify";
 
 import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogTitle,
-    DialogTrigger,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog";
 import { SidebarMenuButton } from "@/components/ui/sidebar-l";
 import {
-    addQuestion,
-    defaultCustomQuestions,
-    isLoading,
-    leafletMapContext,
+  addQuestion,
+  isLoading,
+  leafletMapContext,
 } from "@/lib/context";
 
 export const AddQuestionDialog = ({
@@ -58,49 +56,29 @@ export const AddQuestionDialog = ({
         return true;
     };
 
-    const runAddTentacles = () => {
-        const map = leafletMapContext.get();
-        if (!map) return false;
-        const center = map.getCenter();
-        addQuestion({
-            id: "tentacles",
-            data: defaultCustomQuestions.get()
-                ? {
-                    lat: center.lat,
-                    lng: center.lng,
-                    locationType: "custom",
-                    places: [],
-                }
-                : { lat: center.lat, lng: center.lng, locationType: "mcdonalds" },
-        });
-        return true;
-    };
+  const runAddTentacles = () => {
+    const map = leafletMapContext.get();
+    if (!map) return false;
+    const center = map.getCenter();
+    addQuestion({
+      id: "tentacles",
+      data: { lat: center.lat, lng: center.lng, locationType: "mcdonalds" },
+    });
+    return true;
+  };
 
-    const runAddMatching = () => {
-        const map = leafletMapContext.get();
-        if (!map) return false;
-        const center = map.getCenter();
-        addQuestion({
-            id: "matching",
-            data: defaultCustomQuestions.get()
-                ? { lat: center.lat, lng: center.lng, type: "custom-points" }
-                : { lat: center.lat, lng: center.lng, type: "district" },
-        });
-        return true;
-    };
+  const runAddMatching = () => {
+    const map = leafletMapContext.get();
+    if (!map) return false;
+    const center = map.getCenter();
+    addQuestion({
+      id: "matching",
+      data: { lat: center.lat, lng: center.lng, type: "district" },
+    });
+    return true;
+  };
 
-    const runAddMeasuring = () => {
-        const map = leafletMapContext.get();
-        if (!map) return false;
-        const center = map.getCenter();
-        addQuestion({
-            id: "measuring",
-            data: defaultCustomQuestions.get()
-                ? { lat: center.lat, lng: center.lng, type: "custom-measure" }
-                : { lat: center.lat, lng: center.lng },
-        });
-        return true;
-    };
+
 
     const runPasteQuestion = async () => {
         if (!navigator || !navigator.clipboard) {
@@ -173,16 +151,8 @@ export const AddQuestionDialog = ({
                         disabled={$isLoading}
                     >
                         Add Matching
-                    </SidebarMenuButton>
-                    <SidebarMenuButton
-                        onClick={() => {
-                            if (runAddMeasuring()) setOpen(false);
-                        }}
-                        disabled={$isLoading}
-                    >
-                        Add Measuring
-                    </SidebarMenuButton>
-                    <SidebarMenuButton
+</SidebarMenuButton>
+      <SidebarMenuButton
                         onClick={async () => {
                             const ok = await runPasteQuestion();
                             if (ok) setOpen(false);

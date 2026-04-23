@@ -25,11 +25,10 @@ import {
 
 import { AddQuestionDialog } from "./AddQuestionDialog";
 import {
-    MatchingQuestionComponent,
-    MeasuringQuestionComponent,
-    RadiusQuestionComponent,
-    TentacleQuestionComponent,
-    ThermometerQuestionComponent,
+  MatchingQuestionComponent,
+  RadiusQuestionComponent,
+  TentacleQuestionComponent,
+  ThermometerQuestionComponent,
 } from "./QuestionCards";
 
 export const QuestionSidebar = () => {
@@ -120,23 +119,15 @@ export const QuestionSidebar = () => {
                                     questionKey={question.key}
                                 />
                             );
-                        case "matching":
-                            return (
-                                <MatchingQuestionComponent
-                                    data={question.data}
-                                    key={question.key}
-                                    questionKey={question.key}
-                                />
-                            );
-                        case "measuring":
-                            return (
-                                <MeasuringQuestionComponent
-                                    data={question.data}
-                                    key={question.key}
-                                    questionKey={question.key}
-                                />
-                            );
-                        default:
+        case "matching":
+          return (
+            <MatchingQuestionComponent
+              data={question.data}
+              key={question.key}
+              questionKey={question.key}
+            />
+          );
+        default:
                             return null;
                     }
                 })}

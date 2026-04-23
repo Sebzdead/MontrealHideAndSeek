@@ -1,7 +1,6 @@
 import type { FeatureCollection } from "geojson";
 
 import { adjustPerMatching } from "./questions/matching";
-import { adjustPerMeasuring } from "./questions/measuring";
 import { adjustPerRadius } from "./questions/radius";
 import { adjustPerTentacle } from "./questions/tentacles";
 import { adjustPerThermometer } from "./questions/thermometer";
@@ -27,11 +26,9 @@ export async function adjustMapGeoDataForQuestion(
                     );
                 }
                 return await adjustPerTentacle(question.data, mapGeoData);
-            case "matching":
-                return await adjustPerMatching(question.data, mapGeoData);
-            case "measuring":
-                return await adjustPerMeasuring(question.data, mapGeoData);
-            default:
+    case "matching":
+      return await adjustPerMatching(question.data, mapGeoData);
+    default:
                 return mapGeoData;
         }
     } catch {

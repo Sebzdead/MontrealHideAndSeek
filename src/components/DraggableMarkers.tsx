@@ -6,22 +6,20 @@ import { Marker } from "react-leaflet";
 
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
-    autoSave,
-    questionModified,
-    questions,
-    save,
-    triggerLocalRefresh,
+  autoSave,
+  questionModified,
+  questions,
+  save,
+  triggerLocalRefresh,
 } from "@/lib/context";
 import type { ICON_COLORS } from "@/maps/api";
 
 import {
-    MatchingQuestionComponent,
-    MeasuringQuestionComponent,
-    RadiusQuestionComponent,
-    TentacleQuestionComponent,
-    ThermometerQuestionComponent,
+  MatchingQuestionComponent,
+  RadiusQuestionComponent,
+  TentacleQuestionComponent,
+  ThermometerQuestionComponent,
 } from "./QuestionCards";
-import { Button } from "./ui/button";
 
 let isDragging = false;
 
@@ -116,25 +114,16 @@ const ColoredMarker = ({
                                         sub={sub}
                                     />
                                 );
-                            case "matching":
-                                return (
-                                    <MatchingQuestionComponent
-                                        key={q.key}
-                                        data={q.data}
-                                        questionKey={q.key}
-                                        sub={sub}
-                                    />
-                                );
-                            case "measuring":
-                                return (
-                                    <MeasuringQuestionComponent
-                                        key={q.key}
-                                        data={q.data}
-                                        questionKey={q.key}
-                                        sub={sub}
-                                    />
-                                );
-                            default:
+        case "matching":
+          return (
+            <MatchingQuestionComponent
+              key={q.key}
+              data={q.data}
+              questionKey={q.key}
+              sub={sub}
+            />
+          );
+        default:
                                 return null;
                         }
                     })}
@@ -161,22 +150,16 @@ export const DraggableMarkers = () => {
     const $questions = useStore(questions);
 
 
-    return (
-        <Fragment>
-            {$questions.map((question) => {
-                if (!question.data) return null;
-                if (!question.data.drag) return null;
-                if (
-                    question.id === "matching" &&
-                    question.data.type === "custom-zone"
-                )
-                    return null;
+  return (
+    <Fragment>
+      {$questions.map((question) => {
+        if (!question.data) return null;
+        if (!question.data.drag) return null;
 
-                switch (question.id) {
-                    case "radius":
-                    case "tentacles":
-                    case "matching":
-                    case "measuring":
+        switch (question.id) {
+      case "radius":
+      case "tentacles":
+      case "matching":
                         return (
                             <ColoredMarker
                                 color={question.data.color}

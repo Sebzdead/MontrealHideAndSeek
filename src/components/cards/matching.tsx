@@ -1,31 +1,28 @@
 import { useStore } from "@nanostores/react";
 import * as turf from "@turf/turf";
 import * as React from "react";
-import { toast } from "react-toastify";
 
 import { LatitudeLongitude } from "@/components/LatLngPicker";
 import { Label } from "@/components/ui/label";
 import { Select } from "@/components/ui/select";
 import {
-    MENU_ITEM_CLASSNAME,
-    SidebarMenuItem,
+  MENU_ITEM_CLASSNAME,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar-l";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
-    displayHidingZones,
-    hiderModeEnabled,
-    isLoading,
-    questionModified,
-    questions,
-    triggerLocalRefresh,
+  hiderModeEnabled,
+  isLoading,
+  questionModified,
+  questions,
+  triggerLocalRefresh,
 } from "@/lib/context";
 import { cn } from "@/lib/utils";
 import { fetchLocalLandmarks } from "@/maps/api/landmarks";
 import {
-    determineUnionizedStrings,
-    type MatchingQuestion,
-    matchingQuestionSchema,
-    NO_GROUP,
+  determineUnionizedStrings,
+  type MatchingQuestion,
+  matchingQuestionSchema,
 } from "@/maps/schema";
 
 import { QuestionCard } from "./base";

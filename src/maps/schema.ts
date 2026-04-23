@@ -216,45 +216,6 @@ export const matchingQuestionSchema = z.union([
     }),
 ]).describe(NO_GROUP);
 
-const baseMeasuringQuestionSchema = ordinaryBaseQuestionSchema.extend({
-    hiderCloser: z.boolean().default(true),
-});
-
-const ordinaryMeasuringQuestionSchema = baseMeasuringQuestionSchema.extend({
-    type: z
-        .union([
-            z.literal("airport").describe("Commercial Airport Question"),
-            z.literal("hospital").describe("Hospital Question"),
-            z.literal("park").describe("Park Question"),
-            z.literal("university").describe("University Question"),
-            z.literal("river").describe("River Question"),
-            z.literal("museum").describe("Museum Question"),
-            z.literal("cinema").describe("Cinema Question"),
-            z.literal("coastline").describe("Coastline Question"),
-        ])
-        .default("airport"),
-});
-
-const hidingZoneMeasuringQuestionsSchema = baseMeasuringQuestionSchema.extend({
-    type: z.union([
-        z.literal("mcdonalds").describe("McDonald's Question"),
-        z.literal("rail-measure").describe("Train Station Question"),
-    ]),
-});
-
-// Home game measuring expanded into ordinary measuring
-
-const customMeasuringQuestionSchema = baseMeasuringQuestionSchema.extend({
-    type: z.literal("custom-measure").describe("Custom Measuring Question"),
-    geo: z.any(),
-});
-
-export const measuringQuestionSchema = z.union([
-    ordinaryMeasuringQuestionSchema.describe(NO_GROUP),
-    customMeasuringQuestionSchema.describe(NO_GROUP),
-    hidingZoneMeasuringQuestionsSchema.describe("Hiding Zone Mode"),
-]);
-
 export const questionSchema = z.union([
     z.object({
         id: z.literal("radius"),
@@ -271,12 +232,7 @@ export const questionSchema = z.union([
         key: z.number().default(Math.random),
         data: tentacleQuestionSchema,
     }),
-    z.object({
-        id: z.literal("measuring"),
-        key: z.number().default(Math.random),
-        data: measuringQuestionSchema,
-    }),
-    z.object({
+  z.object({
         id: z.literal("matching"),
         key: z.number().default(Math.random),
         data: matchingQuestionSchema,
@@ -291,11 +247,6 @@ export type ThermometerQuestion = z.infer<typeof thermometerQuestionSchema>;
 export type TentacleQuestion = z.infer<typeof tentacleQuestionSchema>;
 export type APILocations = z.infer<typeof apiLocationSchema>;
 export type MatchingQuestion = z.infer<typeof matchingQuestionSchema>;
-export type HidingZoneMeasuringQuestions = z.infer<typeof hidingZoneMeasuringQuestionsSchema>;
-export type CustomMeasuringQuestion = z.infer<
-    typeof customMeasuringQuestionSchema
->;
-export type MeasuringQuestion = z.infer<typeof measuringQuestionSchema>;
 export type Question = z.infer<typeof questionSchema>;
 export type Questions = z.infer<typeof questionsSchema>;
 export type DeepPartial<T> = {

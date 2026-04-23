@@ -15,11 +15,10 @@ import { showTutorial, tutorialStep } from "@/lib/context";
 import { cn } from "@/lib/utils";
 
 import {
-    MatchingQuestionComponent,
-    MeasuringQuestionComponent,
-    RadiusQuestionComponent,
-    TentacleQuestionComponent,
-    ThermometerQuestionComponent,
+  MatchingQuestionComponent,
+  RadiusQuestionComponent,
+  TentacleQuestionComponent,
+  ThermometerQuestionComponent,
 } from "./QuestionCards";
 
 interface TutorialStep {
@@ -32,25 +31,24 @@ interface TutorialStep {
 
 const tutorialSteps: TutorialStep[] = [
     {
-        title: "Welcome to the Jet Lag Hide and Seek Map Generator!",
+        title: "Welcome to the Montreal Hide and Seek Map Generator!",
         content: (
             <>
-                Welcome to the the Hide and Seek map generator designed for the
-                Jet Lag Home Game! This detailed tutorial will walk you through
-                every feature, option, and question type available in this
-                powerful tool.
+                Welcome to the Hide and Seek map generator, custom-built for
+                the Island of Montreal! This tutorial will walk you through
+                every feature and question type available in this tool.
                 <br />
                 <br />
-                This tool is designed for a custom Montreal version of the Hide
-                and Seek Home Game, though it&apos;s not officially affiliate
-                with the creators. It supports over 40 question variations found
-                in the game!
+                This tool is designed for a custom Montreal version of the Jet
+                Lag Hide and Seek Home Game. The map is pre-configured for the
+                Island of Montreal with local landmarks, metro lines, and
+                Montreal-specific data baked in.
                 <br />
                 <br />
                 If you&apos;re already familiar with the basics, feel free to{" "}
                 <strong>skip this tutorial by scrolling down</strong>. However,
-                this guide covers advanced features you might not know about. To
-                support this free tool, please consider{" "}
+                this guide covers advanced features you might not know about.
+                To support this free tool, please consider{" "}
                 <a
                     href="https://github.com/taibeled/JetLagHideAndSeek"
                     className="text-blue-500 cursor-pointer"
@@ -59,8 +57,7 @@ const tutorialSteps: TutorialStep[] = [
                 >
                     starring the repository on GitHub
                 </a>{" "}
-                or sharing it with fellow Jet Lag fans! Both are free ways to
-                show your support.
+                or sharing it with fellow Jet Lag fans!
             </>
         ),
         position: "center",
@@ -69,16 +66,17 @@ const tutorialSteps: TutorialStep[] = [
         title: "Overview: Game Setup Process",
         content: (
             <>
-                Before diving into specifics, here&apos;s the typical workflow:
+                Here&apos;s the typical workflow for setting up a game on the
+                Island of Montreal:
                 <br />
                 <br />
-                <strong>1. Location Setup:</strong> Define your play area using
-                preset locations or custom polygon drawing
+                <strong>1. Game Area:</strong> The Island of Montreal is
+                pre-loaded as your play area. You can add or subtract regions
+                as needed.
                 <br />
                 <br />
-                <strong>2. Question Creation:</strong> Add and configure the 5
-                question types (Radius, Thermometer, Tentacles, Matching,
-                Measuring)
+<strong>2. Question Creation:</strong> Add and configure the 4
+        question types (Radius, Thermometer, Tentacles, Matching)
                 <br />
                 <br />
                 <strong>3. Sharing:</strong> Share the questions and game
@@ -99,16 +97,29 @@ const tutorialSteps: TutorialStep[] = [
         position: "center",
     },
     {
-        title: "Location Setup: Place Picker",
+        title: "Game Area: The Island of Montreal",
         content: (
             <>
-                The Place Picker allows you to define the game area based on
-                presets. Click the search box to begin exploring locations.
+                The map comes pre-loaded with the Island of Montreal as the
+                default play area. Landmark pins for parks, hospitals,
+                universities, and airports are already displayed on the map.
                 <br />
                 <br />
-                <strong>Supported Location Types:</strong>
-                <br />• Administrative regions (countries, states, counties)
-                <br />• Geographic features (islands, parks)
+                <strong>Landmark Pins on the Map:</strong>
+                <br />• <span style={{ color: "#008000" }}>Green pins</span>{" "}
+                = Parks (Parcs)
+                <br />• <span style={{ color: "#ff0000" }}>Red pins</span> =
+                Hospitals (Hôpitaux)
+                <br />•{" "}
+                <span style={{ color: "#800080" }}>Purple pins</span> =
+                Universities (Universités)
+                <br />•{" "}
+                <span style={{ color: "#000000" }}>Black pins</span> =
+                Airports
+                <br />
+                <br />
+Click any landmark pin to see its name and quickly add a
+        matching question for that location!
             </>
         ),
         targetSelector: '[data-tutorial-id="place-picker"]',
@@ -118,18 +129,18 @@ const tutorialSteps: TutorialStep[] = [
         title: "Location Management: Add, Subtract, Remove",
         content: (
             <>
-                Once you search for locations, this menu shows powerful
-                management options:
+                You can fine-tune the play area beyond the default Island of
+                Montreal:
                 <br />
                 <br />
                 <strong>Adding Locations (+ button):</strong> Expands your play
-                area by including the selected region
+                area by including additional regions
                 <br />
                 <br />
                 <strong>Subtracting Locations (- button):</strong> Creates
                 &ldquo;holes&rdquo; in your play area by excluding specific
-                regions. Perfect for removing water bodies, restricted areas, or
-                creating complex boundaries.
+                regions. Perfect for removing water bodies, restricted areas,
+                or creating complex boundaries.
                 <br />
                 <br />
                 <strong>Removing Locations (X button):</strong> Completely
@@ -141,13 +152,6 @@ const tutorialSteps: TutorialStep[] = [
                 </strong>{" "}
                 Resets all questions and clears cached data when changing
                 locations significantly
-                <br />
-                <br />
-                <strong>
-                    &ldquo;Reuse Preset Locations&rdquo; button:
-                </strong>{" "}
-                Appears when custom polygons exist, allowing you to return to
-                the preset location mode
             </>
         ),
         targetSelector: '[data-tutorial-id="place-picker-content"]',
@@ -162,7 +166,8 @@ const tutorialSteps: TutorialStep[] = [
                 <br />
                 <strong>Polygon Tool:</strong> Draw custom boundaries that
                 perfectly match your intended play area. Great for irregular
-                shapes or when preset locations don&apos;t quite fit your needs.
+                shapes or when preset locations don&apos;t quite fit your
+                needs.
                 <br />
                 <br />
                 <strong>Drawing Tips:</strong>
@@ -183,12 +188,17 @@ const tutorialSteps: TutorialStep[] = [
         title: "Opening the Question Sidebar",
         content: (
             <>
-                Adding questions can be done in two fashions, either through the
-                sidebar, or on the map. To open the sidebar, you must click the
-                highlighted button or proceed to the next step. Furthermore, to
-                add a question on the map, you must either right-click on
-                desktop or long-press on mobile. A question will be added at the
-                clicked location, and you can then select the question type.
+                Adding questions can be done in two ways: through the sidebar,
+                or directly on the map. To open the sidebar, click the
+                highlighted button. To add a question on the map, right-click
+                on desktop or long-press on mobile. A question will be added
+                at the clicked location, and you can then select the question
+                type.
+                <br />
+                <br />
+<strong>Landmark Shortcut:</strong> Click any landmark pin on
+        the map and use the popup menu to instantly add a matching
+        question pre-configured for that location.
             </>
         ),
         targetSelector: '[data-tutorial-id="left-sidebar-trigger"]',
@@ -201,7 +211,6 @@ const tutorialSteps: TutorialStep[] = [
                 This sidebar is your question command center. Each button
                 creates a different question type. Proceed to the next step to
                 learn about each question type in detail.
-                {/* Scrolling does not function for the tutorial when the sidebar dialog is open. */}
             </>
         ),
         targetSelector: '[data-tutorial-id="add-questions-buttons"]',
@@ -211,7 +220,7 @@ const tutorialSteps: TutorialStep[] = [
         title: "Question Creation Interface (Part 2)",
         content: (
             <>
-                Here are the sample questions:
+                Here are the four question types available:
                 <br />
                 <br />
                 <strong>1. RADIUS:</strong> &ldquo;Is the hider within X
@@ -223,26 +232,17 @@ const tutorialSteps: TutorialStep[] = [
                 <br />
                 <br />
                 <strong>3. TENTACLES:</strong> &ldquo;What specific location
-                within X distance of the seekers is the hider closest to?&rdquo;
+                within X distance of the seekers is the hider closest
+                to?&rdquo; (McDonald&apos;s or Libraries)
                 <br />
                 <br />
-                <strong>4. MATCHING:</strong> &ldquo;Does the hider share the
-                same property as this reference point?&rdquo;
-                <br />
-                <br />
-                <strong>5. MEASURING:</strong> &ldquo;Is the hider
-                closer/farther than the seeker to this feature?&rdquo;
-                <br />
-                <br />
-                Furthermore, here are the additional buttons:
-                <br />
-                <br />
-                <strong>&ldquo;Paste Question&rdquo;:</strong> Feature to import
+<strong>4. MATCHING:</strong> &ldquo;Does the hider share the
+        same property as this reference point?&rdquo; (District,
+        Airport, Metro Line, Park, Hospital, University)
+        <br />
+        <br />
+        <strong>&ldquo;Paste Question&rdquo;:</strong> Import
                 questions from clipboard (JSON format)
-                <br />
-                <br />
-                <strong>&ldquo;Save&rdquo; button:</strong> Appears when
-                auto-save is disabled, allowing manual saves
             </>
         ),
         position: "center",
@@ -262,10 +262,10 @@ const tutorialSteps: TutorialStep[] = [
                             data={{
                                 collapsed: false,
                                 drag: true,
-                                lat: 35.6762,
-                                lng: 139.6503,
-                                radius: 10,
-                                unit: "miles",
+                                lat: 45.5017,
+                                lng: -73.5673,
+                                radius: 5,
+                                unit: "kilometers",
                                 color: "blue",
                                 within: false,
                             }}
@@ -312,10 +312,10 @@ const tutorialSteps: TutorialStep[] = [
                             data={{
                                 collapsed: false,
                                 drag: true,
-                                latA: 35.6762,
-                                lngA: 139.6503,
-                                latB: 35.6762,
-                                lngB: 139.7503,
+                                latA: 45.5017,
+                                lngA: -73.5673,
+                                latB: 45.5132,
+                                lngB: -73.5582,
                                 colorA: "red",
                                 colorB: "blue",
                                 warmer: false,
@@ -324,9 +324,9 @@ const tutorialSteps: TutorialStep[] = [
                     </SidebarMenu>
                 </SidebarGroup>
                 <br />
-                <strong>Two-Point System:</strong> Point A (the start point) and
-                Point B (the end point), each with independent coordinates and
-                colors
+                <strong>Two-Point System:</strong> Point A (the start point)
+                and Point B (the end point), each with independent coordinates
+                and colors
                 <br />
                 <br />
                 <strong>&ldquo;Warmer&rdquo; Logic:</strong>
@@ -334,12 +334,12 @@ const tutorialSteps: TutorialStep[] = [
                 <br />• Colder = Hider is closer to Point A (the start point)
                 <br />
                 <br />
-                <strong>Coordinate Input:</strong> Set precise locations or drag
-                markers visually
+                <strong>Coordinate Input:</strong> Set precise locations or
+                drag markers visually
                 <br />
                 <br />
-                <strong>Color Coding:</strong> Different colors help distinguish
-                between points on the map
+                <strong>Color Coding:</strong> Different colors help
+                distinguish between points on the map
             </>
         ),
         position: "center",
@@ -348,8 +348,8 @@ const tutorialSteps: TutorialStep[] = [
         title: "Tentacles Questions: Location Discovery",
         content: (
             <>
-                Tentacles questions identify specific locations within a radius,
-                perfect for narrowing down exact hiding spots:
+                Tentacles questions identify specific locations within a radius.
+                On the Island of Montreal, two location types are available:
                 <br />
                 <br />
                 <SidebarGroup className="text-foreground">
@@ -359,12 +359,12 @@ const tutorialSteps: TutorialStep[] = [
                             data={{
                                 collapsed: false,
                                 drag: true,
-                                lat: 35.6762,
-                                lng: 139.6503,
-                                radius: 15,
-                                unit: "miles",
+                                lat: 45.5017,
+                                lng: -73.5673,
+                                radius: 1,
+                                unit: "kilometers",
                                 color: "red",
-                                locationType: "theme_park",
+                                locationType: "mcdonalds",
                                 location: false,
                                 isInsideCircle: true,
                             }}
@@ -373,24 +373,19 @@ const tutorialSteps: TutorialStep[] = [
                 </SidebarGroup>
                 <br />
                 <strong>Location Types:</strong>
-                <br />• <strong>15-Mile Radius:</strong> Theme Parks, Zoos,
-                Aquariums
-                <br />• <strong>1-Mile Radius:</strong> Museums, Hospitals,
-                Cinemas, Libraries
-                <br />• <strong>Custom:</strong> Define your own points of
-                interest
+                <br />• <strong>McDonald&apos;s:</strong> Find the nearest
+                McDonald&apos;s within the radius
+                <br />• <strong>Libraries:</strong> Find the nearest library
+                within the radius
                 <br />
                 <br />
                 <strong>Radius Control:</strong> Adjusts the search area for
                 finding locations
                 <br />
                 <br />
-                <strong>Smart Detection:</strong> Automatically finds all
-                qualifying locations within the radius using OpenStreetMap data
-                <br />
-                <br />
-                <strong>Custom Mode:</strong> Enable drawing mode to manually
-                place or edit location points
+                <strong>Hider Position:</strong> Toggle whether the hider is
+                inside or outside the radius. When inside, you can select which
+                specific location the hider is at.
             </>
         ),
         position: "center",
@@ -400,8 +395,8 @@ const tutorialSteps: TutorialStep[] = [
         content: (
             <>
                 Matching questions compare properties between the hider&apos;s
-                location and a reference point. This is the most complex
-                question type with numerous variations:
+                location and a reference point. Six matching types are
+                available for Montreal:
                 <br />
                 <br />
                 <SidebarGroup className="text-foreground">
@@ -411,35 +406,37 @@ const tutorialSteps: TutorialStep[] = [
                             data={{
                                 collapsed: false,
                                 drag: true,
-                                lat: 35.6762,
-                                lng: 139.6503,
+                                lat: 45.5017,
+                                lng: -73.5673,
                                 color: "blue",
                                 same: true,
-                                type: "airport",
+                                type: "metro-line",
+                                metroLine: "green",
                             }}
                         />
                     </SidebarMenu>
                 </SidebarGroup>
                 <br />
-                <strong>Zone-Based Matching:</strong>
-                <br />• <strong>Same Zone:</strong> Administrative regions
-                (states, counties, etc.)
-                <br />• <strong>Same First Letter of Zone:</strong> Zones
-                starting with the same letter
-                <br />• <strong>Zone Levels:</strong> OSM administrative levels
-                3-10 for different granularities
+                <strong>District Matching:</strong>
+                <br />• Determines which Montreal borough/district the
+                reference point falls in
+                <br />• &ldquo;Same&rdquo; keeps only that district;
+                &ldquo;Different&rdquo; excludes it
                 <br />
                 <br />
                 <strong>Airport Matching:</strong>
-                <br />• Compares nearest commercial airports (those with IATA
-                codes)
-                <br />• Uses Voronoi diagrams to determine airport catchment
-                areas
+                <br />• Compares nearest commercial airport (Trudeau vs
+                Metropolitan)
+                <br />• Automatically determines which is closer
                 <br />
                 <br />
-                <strong>City Matching:</strong>
-                <br />• Compares nearest major cities (1,000,000+ population)
-                <br />• Useful for large-scale geographic questions
+                <strong>Metro Line Matching:</strong>
+                <br />• Select a metro line: Green, Orange, Yellow, Blue, or
+                REM
+                <br />• &ldquo;Same&rdquo; excludes territory around stations
+                on other lines
+                <br />• &ldquo;Different&rdquo; excludes territory around
+                stations on the selected line
             </>
         ),
         position: "center",
@@ -448,118 +445,44 @@ const tutorialSteps: TutorialStep[] = [
         title: "Matching Questions: Property Comparison (Part 2)",
         content: (
             <>
-                <strong>Full Game Variations:</strong>
-                <br />
-                These require answering based on properties of the hider’s
-                location or nearest features:
-                <br />• Aquariums, Zoos, Theme Parks
-                <br />• Mountains, Museums, Hospitals, Cinemas
-                <br />• Libraries, Golf Courses, Foreign Consulates, Parks
+                <strong>Park, Hospital, and University Matching:</strong>
                 <br />
                 <br />
-                <strong>Hiding Zone Mode Variations:</strong>
-                <br />
-                These work specifically with train station data:
-                <br />• <strong>Same First Letter of Station:</strong> Station
-                names starting with the same letter
-                <br />• <strong>Same Length Station Name:</strong> Station names
-                with identical character counts
-                <br />• <strong>Same Train Line:</strong> Stations connected by
-                rail lines
+                These use Voronoi diagrams to determine which
+                landmark&apos;s territory the hider is in:
                 <br />
                 <br />
-                <strong>Custom Matching:</strong>
-                <br />• <strong>Custom Zone:</strong> Draw your own zones for
-                comparison
-                <br />• <strong>Custom Points:</strong> Define your own point
-                categories
+                <strong>Location Dropdown:</strong> When you select Park,
+                Hospital, or University as the matching type, a dropdown
+                appears listing all known locations of that type on the Island
+                of Montreal. Select a specific location to target its Voronoi
+                cell directly.
+                <br />
+                <br />
+                <strong>Voronoi Logic:</strong>
+                <br />• The Island of Montreal&apos;s landmarks are divided
+                into Voronoi cells — each cell represents the area closest to
+                that landmark
+                <br />• &ldquo;Same&rdquo; keeps only the selected
+                landmark&apos;s cell; all other cells are excluded
+                <br />• &ldquo;Different&rdquo; excludes the selected
+                landmark&apos;s cell; all other cells remain
+                <br />
+                <br />
+                <strong>Quick Add from Map:</strong> Click any landmark pin on
+                the map and select &ldquo;Add Matching&rdquo; to
+                automatically create a matching question with the type and
+                location pre-filled!
+                <br />
+                <br />
+                <strong>Default (Map Pin):</strong> If no specific location is
+                selected, the map pin&apos;s position determines which Voronoi
+                cell is used.
             </>
         ),
         position: "center",
     },
-    {
-        title: "Measuring Questions: Distance Comparison (Part 1)",
-        content: (
-            <>
-                Measuring questions compare the hider&apos;s distance to
-                features against the seeker&apos;s distance:
-                <br />
-                <br />
-                <SidebarGroup className="text-foreground">
-                    <SidebarMenu>
-                        <MeasuringQuestionComponent
-                            questionKey={Math.random()}
-                            data={{
-                                collapsed: false,
-                                drag: true,
-                                lat: 35.6762,
-                                lng: 139.6503,
-                                color: "green",
-                                hiderCloser: true,
-                                type: "coastline",
-                            }}
-                        />
-                    </SidebarMenu>
-                </SidebarGroup>
-                <br />
-                <strong>Geographic Features:</strong>
-                <br />• <strong>Coastline:</strong> Distance to nearest coast
-                using detailed coastline data
-                <br />• <strong>Commercial Airports:</strong> Distance to
-                nearest airport with IATA code
-                <br />• <strong>Major Cities:</strong> Distance to cities with
-                1M+ population
-                <br />• <strong>High-Speed Rail:</strong> Distance to high-speed
-                rail lines (like Shinkansen)
-                <br />
-                <br />
-                <strong>Standard Game Variations:</strong>
-                <br />
-                Same location types as Matching questions but focused on
-                distance rather than categorization:
-                <br />• Aquariums, Zoos, Theme Parks, Mountains,
-                <br />• Museums, Hospitals, Cinemas, Libraries
-                <br />• Golf Courses, Foreign Consulates, Parks
-                <br />
-                <br />
-                <strong>Closer/Farther Logic:</strong> Toggle whether the hider
-                was closer or farther from where the seeker was
-            </>
-        ),
-        position: "center",
-    },
-    {
-        title: "Measuring Questions: Distance Comparison (Part 2)",
-        content: (
-            <>
-                <strong>Hiding Zone Mode Variations:</strong>
-                <br />
-                These work with the zone analysis system:
-                <br />• <strong>McDonald&apos;s:</strong> Distance to nearest
-                McDonald&apos;s location
-                <br />• <strong>7-Eleven:</strong> Distance to nearest 7-Eleven
-                convenience store
-                <br />• <strong>Train Station:</strong> Distance to nearest
-                railway station
-                <br />
-                <br />
-                <strong>Custom Measuring:</strong>
-                <br />• <strong>Custom Measure:</strong> Draw your own features
-                to measure distance to
-                <br />• Enable drawing mode to create custom points or areas
-                <br />• Perfect for game-specific features or local landmarks
-                <br />
-                <br />
-                <strong>Implementation Details:</strong>
-                <br />• Uses geodesic distance calculations for accuracy
-                <br />• Buffers around features create zones of equal distance
-                <br />• Results show which areas are closer/farther than the
-                reference point
-            </>
-        ),
-        position: "center",
-    },
-    {
+{
         title: "Sharing and Collaboration Features",
         content: (
             <>
@@ -612,8 +535,13 @@ const tutorialSteps: TutorialStep[] = [
                 4. Hider shares the updated link with answers back to seekers
                 <br />
                 <br />
-                <strong>Privacy:</strong> The hider&apos;s exact coordinates are
-                never shared, only the question answers.
+                <strong>Privacy:</strong> The hider&apos;s exact coordinates
+                are never shared, only the question answers.
+                <br />
+                <br />
+                <strong>Note:</strong> When Hider Mode is active, question
+                result toggles (Same/Different, Inside/Outside, etc.) are
+                locked to prevent manual overrides.
             </>
         ),
         position: "center",
@@ -622,146 +550,104 @@ const tutorialSteps: TutorialStep[] = [
         title: "Advanced Options and Settings",
         content: (
             <>
-                The options menu contains powerful customization features that
-                significantly impact your gameplay experience:
+                The options menu contains powerful customization features:
                 <br />
                 <br />
                 <strong>Display Options:</strong>
                 <br />• <strong>Auto-zoom:</strong> Automatically fits map to
-                relevant areas when adding questions or analyzing zones. Disable
-                for manual zoom control.
+                relevant areas when adding questions or analyzing zones.
                 <br />• <strong>Animate Map Movements:</strong> Smooth
                 transitions between map positions vs instant jumps.
-                <br />• <strong>Highlight Train Lines:</strong> Visual emphasis
-                on railway networks. Requires Thunderforest API key but provides
-                crucial visual context for train-related questions.
-                <br />• <strong>Follow Me:</strong> GPS tracking for mobile use.
-                Adds a marker that follows your location in real-time.
+                <br />• <strong>Follow Me:</strong> GPS tracking for mobile
+                use. Adds a marker that follows your location in real-time.
                 <br />
                 <br />
                 <strong>Unit Preferences:</strong>
                 <br />• <strong>Default Unit:</strong> Miles, kilometers, or
                 meters for new questions. This becomes the default for all new
-                questions. Choose based on your region&apos;s conventions.
-                <br />• Affects all distance-based questions and measurements
-                throughout the entire game
+                questions.
                 <br />
                 <br />
                 <strong>Automation:</strong>
-                <br />• <strong>Auto-save:</strong> Continuous saving vs manual
-                save control. When disabled, you&apos;ll see &ldquo;Save&rdquo;
-                buttons appear on question cards for manual control.{" "}
-                <strong>
-                    I highly recommend disabling this as I find that it makes
-                    changing data easier.
-                </strong>
+                <br />• <strong>Auto-save:</strong> Continuous saving vs
+                manual save control. When disabled, you&apos;ll see
+                &ldquo;Save&rdquo; buttons appear on question cards for manual
+                control.
+                <br />
                 <br />
                 <strong>API Integration:</strong>
                 <br />• <strong>Thunderforest API Key:</strong> Enhanced map
                 tiles
-                <br />• <strong>Pastebin API Key:</strong> Improved sharing for
-                large games
-                <br />• <strong>Always Use Pastebin:</strong> Force external
-                hosting for all shares. This is also useful if you want to
-                generate a QR code containing the link, as this makes the QR
-                code much less convoluted.
+                <br />• <strong>Pastebin API Key:</strong> Improved sharing
+                for large games
             </>
         ),
         targetSelector: '[data-tutorial-id="option-questions-button"]',
         position: "top",
     },
     {
-        title: "Data Sources, Accuracy, and Limitations",
+        title: "Data Sources and Accuracy",
         content: (
             <>
-                Understanding the underlying data sources helps set appropriate
+                Understanding the underlying data helps set appropriate
                 expectations:
                 <br />
                 <br />
+                <strong>Montreal-Specific Data:</strong>
+                <br />• <strong>Landmarks:</strong> Parks, hospitals,
+                universities, and airports are sourced from local Montreal
+                geographic data
+                <br />• <strong>Metro Lines:</strong> STM and REM station data
+                with accurate line assignments (Green, Orange, Yellow, Blue,
+                REM)
+                <br />• <strong>Districts:</strong> Montreal borough
+                boundaries for district matching
+                <br />
+                <br />
                 <strong>OpenStreetMap (OSM) Foundation:</strong>
-                <br />• All geographic data comes from OpenStreetMap
+                <br />• McDonald&apos;s, libraries, and other POI data comes
+                from OpenStreetMap
                 <br />• Community-driven mapping with varying completeness
-                <br />• Generally excellent in urban areas, more sparse in rural
-                regions
-                <br />• Data quality depends on local mapping community activity
-                <br />• Updated regularly but may lag behind real-world changes
-                <br />
-                <br />
-                <strong>Administrative Boundaries:</strong>
-                <br />• Official government boundaries imported from
-                authoritative sources
-                <br />• High accuracy for major administrative divisions
-                <br />• Simplified to ±100 meters for browser performance
-                <br />• Some disputed or changing boundaries may be outdated
-                <br />
-                <br />
-                <strong>Transportation Data:</strong>
-                <br />• Train stations: Good coverage in developed regions
-                <br />• Commercial airports: Limited to those with IATA codes
-                <br />• High-speed rail: Covers major systems (Shinkansen, TGV,
-                etc.)
-                <br />• Business data (McDonald&apos;s, 7-Eleven) depends on
-                local mapping
-                <br />
-                <br />
-                <strong>Points of Interest:</strong>
-                <br />• Museums, hospitals, cinemas: Urban bias in coverage
-                <br />• Theme parks, zoos: Major attractions well-represented
-                <br />• Libraries, golf courses, mountains: Completeness varies
-                by region
-                <br />• Always verify critical locations for your specific area
+                <br />• Generally excellent in urban areas like Montreal
                 <br />
                 <br />
                 <strong>Coordinate Accuracy:</strong>
                 <br />• Distance calculations use geodesic formulas
-                <br />• Accounts for Earth&apos;s curvature and ellipsoid shape
                 <br />• Typical accuracy within 1-2 meters for positioning
-                <br />• Coastline data accuracy approximately ±100 meters
-                <br />• Administrative boundary simplification may affect
-                precision
-                <br />
-                <br />
-                <strong>Performance Limitations:</strong>
-                <br />• Large datasets may cause browser slowdowns
-                <br />• Memory usage increases with game area size
-                <br />• Complex polygons simplified for rendering performance
-                <br />• API rate limits may affect real-time data loading
-                <br />• Mobile devices have additional memory constraints
+                <br />• Metro station exclusion zones use a 300m radius buffer
             </>
         ),
         position: "center",
     },
     {
-        title: "You're Ready to Master Hide and Seek!",
+        title: "You're Ready to Master Montreal Hide and Seek!",
         content: (
             <>
-                Congratulations! You now have comprehensive knowledge of all 40+
-                question variations and advanced features in this tool.
+                Congratulations! You now have comprehensive knowledge of all
+                features in this Montreal Hide and Seek map generator.
                 <br />
                 <br />
-                <strong>Quick Start Checklist:</strong>
-                <br />✓ Set up your game area using Place Picker or custom
-                polygons
-                <br />✓ Add and configure questions using the five main types
+<strong>Quick Start Checklist:</strong>
+          <br />✓ The Island of Montreal is pre-loaded as your play area
+          <br />✓ Add and configure questions using the four main types
+          <br />✓ Click landmark pins to quickly add matching
+          questions
                 <br />✓ Refresh the map after adding questions to verify the
                 elimination area
-                <br />✓ Configure options for optimal performance and experience
-                <br />✓ Share the game link with all players using Share button
+                <br />✓ Share the game link with all players using the Share
+                button
                 <br />✓ Use Hider Mode for automatic question answering
-                <br />✓ Analyze results
                 <br />
                 <br />
-                <strong>Master the Five Question Types:</strong>
-                <br />• <strong>Radius:</strong> Distance-based circles
-                (inside/outside)
-                <br />• <strong>Thermometer:</strong> Relative distance
-                comparison (warmer/colder)
-                <br />• <strong>Tentacles:</strong> Specific location
-                identification by category
-                <br />• <strong>Matching:</strong> Property comparison (same
-                zone, nearest airport, etc...)
-                <br />• <strong>Measuring:</strong> Distance comparison relative
-                to seekers
+<strong>Master the Four Question Types:</strong>
+          <br />• <strong>Radius:</strong> Distance-based circles
+          (inside/outside)
+          <br />• <strong>Thermometer:</strong> Relative distance
+          comparison (warmer/colder)
+          <br />• <strong>Tentacles:</strong> Specific location
+          identification (McDonald&apos;s or Libraries)
+          <br />• <strong>Matching:</strong> Property comparison
+          (District, Airport, Metro Line, Park, Hospital, University)
                 <br />
                 <br />
                 <strong>Need Help?</strong> This tutorial is always available
@@ -774,28 +660,10 @@ const tutorialSteps: TutorialStep[] = [
                 >
                     report issues or request features on GitHub
                 </a>
-                . Your feedback helps improve the tool for everyone!
+                .
                 <br />
                 <br />
-                <strong>Support the Project:</strong> If this tool enhances your
-                Jet Lag games, please consider{" "}
-                <a
-                    href="https://github.com/taibeled/JetLagHideAndSeek"
-                    className="text-blue-500 cursor-pointer"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    leaving a GitHub star
-                </a>{" "}
-                and sharing with fellow fans. Every star helps motivate
-                continued development! As of writing this, this project contains
-                over 12,002 lines of code. At a liberal estimate of 50 lines per
-                hour, us developers have collectively put over 240 hours into
-                this project! Giving us a free star is a great way to show your
-                appreciation for our work.
-                <br />
-                <br />
-                Happy hiding and seeking!
+                Happy hiding and seeking on the Island of Montreal!
             </>
         ),
         position: "center",

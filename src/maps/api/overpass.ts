@@ -5,27 +5,24 @@ import osmtogeojson from "osmtogeojson";
 import { toast } from "react-toastify";
 
 import {
-    additionalMapGeoLocations,
-    mapGeoLocation,
-    polyGeoJSON,
+  additionalMapGeoLocations,
+  mapGeoLocation,
+  polyGeoJSON,
 } from "@/lib/context";
 import { safeUnion } from "@/maps/geo-utils";
+import type { MatchingQuestion } from "@/maps/schema";
 
 import { cacheFetch, determineCache } from "./cache";
 import {
-    LOCATION_FIRST_TAG,
-    OVERPASS_API,
-    OVERPASS_API_FALLBACK,
+  LOCATION_FIRST_TAG,
+  OVERPASS_API,
+  OVERPASS_API_FALLBACK,
 } from "./constants";
 import { fetchLocalLandmarks } from "./landmarks";
 import type {
-    APILocations,
-    EncompassingTentacleQuestionSchema,
-    HidingZoneMatchingQuestions,
-    HidingZoneMeasuringQuestions,
+  EncompassingTentacleQuestionSchema,
 } from "./types";
-import { QuestionSpecificLocation } from "./types";
-import { CacheType } from "./types";
+import { CacheType, QuestionSpecificLocation } from "./types";
 
 export const getOverpassData = async (
     query: string,
@@ -407,7 +404,7 @@ export const findPlacesSpecificInZone = async (
 };
 
 export const nearestToQuestion = async (
-    question: HidingZoneMatchingQuestions | HidingZoneMeasuringQuestions,
+  question: MatchingQuestion,
 ) => {
     if (
         ["airport", "hospital", "university", "river", "park"].includes(

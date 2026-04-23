@@ -3,29 +3,21 @@ import * as turf from "@turf/turf";
 import { Suspense, use } from "react";
 
 import { LatitudeLongitude } from "@/components/LatLngPicker";
-import PresetsDialog from "@/components/PresetsDialog";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import {
-    MENU_ITEM_CLASSNAME,
-    SidebarMenuItem,
+  MENU_ITEM_CLASSNAME,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar-l";
-import { UnitSelect } from "@/components/UnitSelect";
 import {
-    drawingQuestionKey,
-    isLoading,
-    questionModified,
-    questions,
-    triggerLocalRefresh,
+  isLoading,
+  questionModified,
+  questions,
+  triggerLocalRefresh,
 } from "@/lib/context";
-import { cn, mapToObj } from "@/lib/utils";
+import { mapToObj } from "@/lib/utils";
 import { findTentacleLocations } from "@/maps/api";
 import {
-    determineUnionizedStrings,
-    NO_GROUP,
-    type TentacleQuestion,
-    tentacleQuestionSchema,
+  type TentacleQuestion,
 } from "@/maps/schema";
 
 import { QuestionCard } from "./base";
@@ -41,9 +33,8 @@ export const TentacleQuestionComponent = ({
     sub?: string;
     className?: string;
 }) => {
-    const $questions = useStore(questions);
-    const $drawingQuestionKey = useStore(drawingQuestionKey);
-    const $isLoading = useStore(isLoading);
+  const $questions = useStore(questions);
+  const $isLoading = useStore(isLoading);
     const label = `Tentacles
     ${
         $questions

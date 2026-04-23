@@ -1,20 +1,16 @@
 import { useStore } from "@nanostores/react";
 
 import { LatitudeLongitude } from "@/components/LatLngPicker";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
-    MENU_ITEM_CLASSNAME,
-    SidebarMenuItem,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar-l";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { UnitSelect } from "@/components/UnitSelect";
 import {
-    hiderModeEnabled,
-    isLoading,
-    questionModified,
-    questions,
-    triggerLocalRefresh,
+  isLoading,
+  questionModified,
+  questions,
+  triggerLocalRefresh,
 } from "@/lib/context";
 import { cn } from "@/lib/utils";
 import type { RadiusQuestion } from "@/maps/schema";
@@ -32,9 +28,8 @@ export const RadiusQuestionComponent = ({
     sub?: string;
     className?: string;
 }) => {
-    useStore(triggerLocalRefresh);
-    const $hiderMode = useStore(hiderModeEnabled);
-    const $questions = useStore(questions);
+  useStore(triggerLocalRefresh);
+  const $questions = useStore(questions);
     const $isLoading = useStore(isLoading);
     const label = `Radius
     ${

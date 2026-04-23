@@ -1,75 +1,57 @@
-# Jet Lag The Game: Hide and Seek Map Generator
+# Jet Lag The Game: Montreal Hide and Seek Map Generator
 
-A tool to trivially generate interactive maps for viewing hiding possibilities in Jet Lag The Game's Hide and Seek. So far, the following questions have been implemented (see https://github.com/taibeled/JetLagHideAndSeek/issues/9 for more):
+A custom-built tool for generating interactive maps for the Island of Montreal, designed for Jet Lag The Game's Hide and Seek. The map is pre-configured with Montreal-specific data including borough boundaries, metro lines, and local landmarks (parks, hospitals, universities, airports).
 
-- Radius
-    - All
-- Thermometer
-    - All
-- Matching
-    - Same occupance of custom zone
-    - Same nearest of custom points
-    - Same zone (i.e., same region or prefecture)
-    - Same first letter of zone
-    - Same nearest commercial airport
-    - Same train line
-    - Same nearest major city
-    - Same length of station's name
-    - Same first letter of train station name
-    - Same nearest park
-    - Same nearest amusement park
-    - Same nearest zoo
-    - Same nearest aquarium
-    - Same nearest golf course
-    - Same nearest mountain
-    - Same nearest museum
-    - Same nearest movie theater
-    - Same nearest hospital
-    - Same nearest library
-    - Same nearest foreign consulate
-- Measuring
-    - Distance to custom points/line/polygon
-    - Distance to coastline
-    - Distance to commercial airport
-    - Distance to major city
-    - Distance to high-speed rail
-    - Distance to rail station
-    - Distance to 7-Eleven
-    - Distance to McDonald's
-    - Distance to park
-    - Distance to amusement park
-    - Distance to zoo
-    - Distance to aquarium
-    - Distance to golf course
-    - Distance to mountain
-    - Distance to museum
-    - Distance to movie theater
-    - Distance to hospital
-    - Distance to library
-    - Distance to foreign consulate
-- Tentacles
-    - Custom locations
-    - Zoo
-    - Aquarium
-    - Amusement Park
-    - Museum
-    - Hospital
-    - Movie theater
-    - Library
+## Question Types
+
+### Radius
+
+- Inside/outside a given distance of a point
+- Supports miles, kilometers, and meters
+
+### Thermometer
+
+- Closer to point A or point B (warmer/colder)
+
+### Tentacles
+
+- McDonald's — nearest McDonald's within a radius
+- Libraries — nearest library within a radius
+
+### Matching
+
+Matching questions compare properties of the hider's location against a reference point. The answer is either "Same" or "Different", and the map territory is carved accordingly:
+
+- **District** — Same or different Montreal borough. Uses local borough boundary data to include or exclude the matching district.
+- **Airport** — Same or different nearest commercial airport (Trudeau vs Metropolitan). Uses Voronoi cells to determine catchment areas.
+- **Metro Line** — Same or different metro line (Green, Orange, Yellow, Blue, or REM). A dropdown selects the line. "Same" excludes 300m territory around all stations on other lines; "Different" excludes territory around stations on the selected line.
+- **Park** — Same or different nearest park. A dropdown selects a specific park by name. Uses Voronoi cells computed from all parks on the Island of Montreal.
+- **Hospital** — Same or different nearest hospital. A dropdown selects a specific hospital by name. Uses Voronoi cells computed from all hospitals.
+- **University** — Same or different nearest university. A dropdown selects a specific university by name. Uses Voronoi cells computed from all universities.
+
+For Park, Hospital, and University questions: if the answer is "Same", only the selected landmark's Voronoi cell remains on the map; if "Different", that cell is excluded. You can also click a landmark pin on the map and select "Add Matching" to automatically create a pre-configured matching question.
+
+## Map Features
+
+- **Pre-loaded Island of Montreal** as the default play area
+- **Landmark pins** displayed on the map for parks (green), hospitals (red), universities (purple), and airports (black)
+- **Popup menus** on landmark pins for quick question creation
+- **Metro line and station overlays** for visual reference
+- **Custom polygon drawing** for fine-tuning boundaries
+- **Hider Mode** — automatically answers all questions based on the hider's location
+- **URL sharing** — embed entire game state in a shareable link
 
 ## Contributing
 
-This project has evolved significantly, encompassing over 10,000 lines of code. Many intricate features have been developed, so therefore contributions are very much welcome. If you find a bug, please either file an issue or create a pull request. Furthermore, enhancements/feature requests are necessary to keep developing this project, so developments of those would also be appreciated. Here is a list of some suggestions for those wanting to help develop this tool:
+This project has evolved significantly from a generic global tool into a Montreal-specific Hide and Seek map generator. Contributions are very much welcome — whether it's adding new Montreal-specific question types, improving landmark data, refactoring code, or fixing bugs. If you find a bug, please either file an issue or create a pull request. Some suggestions:
 
-- [ ] Adding more questions (https://github.com/taibeled/JetLagHideAndSeek/issues/9, https://github.com/taibeled/JetLagHideAndSeek/issues/32, https://github.com/taibeled/JetLagHideAndSeek/issues/34)
+- [ ] Adding more Montreal-specific questions (new landmark types, STM bus routes, BIXI stations, etc.)
+- [ ] Improving landmark data accuracy in `final_landmarks.geojson`
 - [ ] Refactoring code
-- [ ] Tests (https://github.com/taibeled/JetLagHideAndSeek/issues/36)
-- [ ] Custom question presets (https://github.com/taibeled/JetLagHideAndSeek/issues/95)
-- [ ] Enable/disable specific bus/train routes (https://github.com/taibeled/JetLagHideAndSeek/issues/65)
-- [ ] Manually define bus/train routes (https://github.com/taibeled/JetLagHideAndSeek/issues/61)
-- [x] Copy coordinates of right-clicked point on map (https://github.com/taibeled/JetLagHideAndSeek/issues/94)
+- [ ] Tests
+- [ ] Custom question presets
 
-Even if you're not a programmer, you can still help by further documenting the unknown questions.
+Even if you're not a programmer, you can still help by verifying landmark locations and reporting inaccurate data.
 
 ## Developer Workflow
 

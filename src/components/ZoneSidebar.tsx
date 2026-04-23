@@ -24,25 +24,20 @@ import {
     displayHidingZonesStyle,
     isLoading,
     leafletMapContext,
-    questionFinishedMapData,
-    questions,
-    trainStations,
+  questionFinishedMapData,
+  trainStations,
 } from "@/lib/context";
 import { cn } from "@/lib/utils";
 import {
-    BLANK_GEOJSON,
-    findPlacesSpecificInZone,
-    loadLocalStations,
-    QuestionSpecificLocation,
-    type StationCircle,
-    type StationPlace,
+  BLANK_GEOJSON,
+  loadLocalStations,
+  type StationCircle,
 } from "@/maps/api";
 import {
-    extractStationLabel,
-    extractStationName,
-    holedMask,
-    lngLatToText,
-    safeUnion,
+  extractStationLabel,
+  extractStationName,
+  lngLatToText,
+  safeUnion,
 } from "@/maps/geo-utils";
 
 import {
@@ -158,7 +153,7 @@ export const ZoneSidebar = () => {
                 }),
             );
 
-            let circles = places
+            const circles = places
                 .map((place) => {
                     const center = turf.getCoord(place);
                     return turf.circle(center, HIDING_RADIUS_KM, {
@@ -171,49 +166,7 @@ export const ZoneSidebar = () => {
                     return !turf.booleanWithin(circle, unionized);
                 });
 
-            for (const question of questions.get()) {
-                if (
-                    question.id === "measuring" &&
-                    (question.data.type === "mcdonalds")
-                ) {
-                    const points = await findPlacesSpecificInZone(
-                        question.data.type === "mcdonalds"
-                            ? QuestionSpecificLocation.McDonalds
-                            : QuestionSpecificLocation.Seven11,
-                    );
-
-                    const nearestPoint = turf.nearestPoint(
-                        turf.point([question.data.lng, question.data.lat]),
-                        points as any,
-                    );
-
-                    const distance = turf.distance(
-                        turf.point([question.data.lng, question.data.lat]),
-                        nearestPoint as any,
-                        { units: "kilometers" },
-                    );
-
-                    circles = circles.filter((circle) => {
-                        const point = turf.point(
-                            turf.getCoord(circle.properties),
-                        );
-
-                        const nearest = turf.nearestPoint(point, points as any);
-
-                        return question.data.hiderCloser
-                            ? turf.distance(point, nearest as any, {
-                                units: "kilometers",
-                            }) <
-                            distance + HIDING_RADIUS_KM
-                            : turf.distance(point, nearest as any, {
-                                units: "kilometers",
-                            }) >
-                            distance - HIDING_RADIUS_KM;
-                    });
-                }
-            }
-
-            setStations(circles);
+      setStations(circles);
             isLoading.set(false);
         };
 
@@ -242,14 +195,13 @@ export const ZoneSidebar = () => {
             );
 
             if (hiderStation !== undefined) {
-                selectionProcess(
-                    hiderStation,
-                    map,
-                    stations,
-                    showGeoJSON,
-                    $questionFinishedMapData,
-                    HIDING_RADIUS_KM,
-                ).catch((error) => {
+        selectionProcess(
+          hiderStation,
+          map,
+          stations,
+          showGeoJSON,
+          $questionFinishedMapData,
+        ).catch((error) => {
                     console.log("Error in hiding zone selection:", error);
                     toast.error(
                         "An error occurred during hiding zone selection",
@@ -571,12 +523,11 @@ function styleStations(
 }
 
 async function selectionProcess(
-    station: any,
-    map: L.Map,
-    stations: any[],
-    showGeoJSON: (geoJSONData: any) => void,
-    $questionFinishedMapData: any,
-    $hidingRadius: number,
+  station: any,
+  map: L.Map,
+  stations: any[],
+  showGeoJSON: (geoJSONData: any) => void,
+  $questionFinishedMapData: any,
 ) {
     const bbox = turf.bbox(station);
 
@@ -592,102 +543,16 @@ async function selectionProcess(
                 turf.mask(station),
             ]),
         ),
-    ]);
+]);
 
-    for (const question of questions.get()) {
-        if (
-            question.id === "measuring" &&
-            question.data.type === "rail-measure"
-        ) {
-            const location = turf.point([question.data.lng, question.data.lat]);
+  if (mapData.type !== "FeatureCollection") {
+    mapData = {
+      type: "FeatureCollection",
+      features: [mapData],
+    };
+  }
 
-            const nearestTrainStation = turf.nearestPoint(
-                location,
-                turf.featureCollection(
-                    stations.map((x) => x.properties.geometry),
-                ),
-            );
-
-            const distance = turf.distance(location, nearestTrainStation);
-
-            const circles = stations
-                .filter(
-                    (x) =>
-                        turf.distance(
-                            station.properties.geometry,
-                            x.properties.geometry,
-                        ) <
-                        distance + 1.61 * $hidingRadius,
-                )
-                .map((x) => turf.circle(x.properties.geometry, distance));
-
-            if (question.data.hiderCloser) {
-                mapData = safeUnion(
-                    turf.featureCollection([
-                        ...mapData.features,
-                        holedMask(turf.featureCollection(circles)),
-                    ]),
-                );
-            } else {
-                mapData = safeUnion(
-                    turf.featureCollection([...mapData.features, ...circles]),
-                );
-            }
-        }
-        if (
-            question.id === "measuring" &&
-            (question.data.type === "mcdonalds")
-        ) {
-            const points = await findPlacesSpecificInZone(
-                question.data.type === "mcdonalds"
-                    ? QuestionSpecificLocation.McDonalds
-                    : QuestionSpecificLocation.Seven11,
-            );
-
-            const seeker = turf.point([question.data.lng, question.data.lat]);
-            const nearest = turf.nearestPoint(seeker, points as any);
-
-            const distance = turf.distance(seeker, nearest, {
-                units: "kilometers",
-            });
-
-            const filtered = points.features.filter(
-                (x) =>
-                    turf.distance(x as any, station.properties.geometry, {
-                        units: "kilometers",
-                    }) <
-                    distance + $hidingRadius,
-            );
-
-            const circles = filtered.map((x) =>
-                turf.circle(x as any, distance, {
-                    units: "kilometers",
-                }),
-            );
-
-            if (question.data.hiderCloser) {
-                mapData = safeUnion(
-                    turf.featureCollection([
-                        ...mapData.features,
-                        holedMask(turf.featureCollection(circles)),
-                    ]),
-                );
-            } else {
-                mapData = safeUnion(
-                    turf.featureCollection([...mapData.features, ...circles]),
-                );
-            }
-        }
-
-        if (mapData.type !== "FeatureCollection") {
-            mapData = {
-                type: "FeatureCollection",
-                features: [mapData],
-            };
-        }
-    }
-
-    if (_.isEqual(mapData, BLANK_GEOJSON)) {
+  if (_.isEqual(mapData, BLANK_GEOJSON)) {
         toast.warning(
             "The hider cannot be in this hiding zone. This wasn't eliminated on the sidebar as its absence was caused by multiple criteria.",
         );

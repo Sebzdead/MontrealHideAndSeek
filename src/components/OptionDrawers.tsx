@@ -19,9 +19,8 @@ import {
     baseTileLayer,
     customInitPreference,
     customPresets,
-    customStations,
-    defaultCustomQuestions,
-    defaultUnit,
+  customStations,
+  defaultUnit,
     disabledStations,
     displayHidingZonesOptions,
     followMe,
@@ -36,10 +35,9 @@ import {
     measureDistanceEnabled,
     pastebinApiKey,
     permanentOverlay,
-    polyGeoJSON,
-    questions,
-    save,
-    showTutorial,
+  polyGeoJSON,
+  questions,
+  showTutorial,
     thunderforestApiKey,
     triggerLocalRefresh,
     useCustomStations,
@@ -60,7 +58,6 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Select } from "./ui/select";
 import { Separator } from "./ui/separator";
-import { SidebarMenu } from "./ui/sidebar-l";
 import { UnitSelect } from "./UnitSelect";
 
 const HIDING_ZONE_URL_PARAM = "hz";
@@ -69,8 +66,7 @@ const PASTEBIN_URL_PARAM = "pb";
 
 export const OptionDrawers = ({ className }: { className?: string }) => {
     useStore(triggerLocalRefresh);
-    const $defaultCustomQuestions = useStore(defaultCustomQuestions);
-    const $allowGooglePlusCodes = useStore(allowGooglePlusCodes);
+  const $allowGooglePlusCodes = useStore(allowGooglePlusCodes);
     const $defaultUnit = useStore(defaultUnit);
     const $animateMapMovements = useStore(animateMapMovements);
     const $autoZoom = useStore(autoZoom);
@@ -585,24 +581,11 @@ export const OptionDrawers = ({ className }: { className?: string }) => {
                                     onCheckedChange={() =>
                                         followMe.set(!$followMe)
                                     }
-                                />
-                            </div>
-                            <div className="flex flex-row items-center gap-2">
-                                <label className="text-2xl font-semibold font-poppins">
-                                    Default to custom questions?
-                                </label>
-                                <Checkbox
-                                    checked={$defaultCustomQuestions}
-                                    onCheckedChange={() =>
-                                        defaultCustomQuestions.set(
-                                            !$defaultCustomQuestions,
-                                        )
-                                    }
-                                />
-                            </div>
-                            <div className="flex flex-row items-center gap-2">
-                                <label className="text-2xl font-semibold font-poppins">
-                                    Allow Google Plus codes?
+              />
+            </div>
+            <div className="flex flex-row items-center gap-2">
+              <label className="text-2xl font-semibold font-poppins">
+                Allow Google Plus codes?
                                 </label>
                                 <Checkbox
                                     checked={$allowGooglePlusCodes}

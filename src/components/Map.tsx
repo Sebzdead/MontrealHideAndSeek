@@ -31,8 +31,7 @@ import {
     polyGeoJSON,
     questionFinishedMapData,
     questions,
-    thunderforestApiKey,
-    triggerLocalRefresh,
+  thunderforestApiKey,
 } from "@/lib/context";
 import { cn } from "@/lib/utils";
 import { applyQuestionsToMapGeoData, holedMask } from "@/maps";
@@ -379,7 +378,7 @@ export const Map = ({ className }: { className?: string }) => {
             }
 
             const dedupedFeatures = Array.from(groupedByStation.entries())
-                .map(([_, stationFeatures]) => {
+                .map(([, stationFeatures]) => {
                     if (stationFeatures.length === 0) return null;
                     const pickFrom = stationFeatures;
 
@@ -591,9 +590,8 @@ export const Map = ({ className }: { className?: string }) => {
                                 ${name}
                             </div>
                             <div style="display: flex; flex-direction: column; gap: 4px;">
-                                <button id="p-btn-match" class="bg-gray-100 hover:bg-gray-200 text-black font-medium px-2 py-1.5 rounded-sm text-xs shadow-sm transition-colors w-full text-left" type="button">Add Matching</button>
-                                <button id="p-btn-meas" class="bg-gray-100 hover:bg-gray-200 text-black font-medium px-2 py-1.5 rounded-sm text-xs shadow-sm transition-colors w-full text-left" type="button">Add Measuring</button>
-                                <button id="p-btn-copy" class="bg-gray-100 hover:bg-gray-200 text-black font-medium px-2 py-1.5 rounded-sm text-xs shadow-sm transition-colors w-full text-left" type="button">Copy Coordinates</button>
+        <button id="p-btn-match" class="bg-gray-100 hover:bg-gray-200 text-black font-medium px-2 py-1.5 rounded-sm text-xs shadow-sm transition-colors w-full text-left" type="button">Add Matching</button>
+        <button id="p-btn-copy" class="bg-gray-100 hover:bg-gray-200 text-black font-medium px-2 py-1.5 rounded-sm text-xs shadow-sm transition-colors w-full text-left" type="button">Copy Coordinates</button>
                             </div>
                         `;
 
@@ -640,15 +638,6 @@ export const Map = ({ className }: { className?: string }) => {
                     });
                 });
 
-                        const btnMeas = container.querySelector("#p-btn-meas");
-                        if (btnMeas)
-                            btnMeas.addEventListener("click", () => {
-                                map.closePopup();
-                                addQuestion({
-                                    id: "measuring",
-                                    data: { lat, lng },
-                                });
-                            });
 
                         const btnCopy = container.querySelector("#p-btn-copy");
                         if (btnCopy)
@@ -1047,20 +1036,8 @@ export const Map = ({ className }: { className?: string }) => {
                                 },
                             });
                         },
-                    },
-                    {
-                        text: "Add Measuring",
-                        callback: (e: any) => {
-                            addQuestion({
-                                id: "measuring",
-                                data: {
-                                    lat: e.latlng.lat,
-                                    lng: e.latlng.lng,
-                                },
-                            });
-                        },
-                    },
-                    {
+},
+      {
                         text: "Copy Coordinates",
                         callback: (e: any) => {
                             if (!navigator || !navigator.clipboard) {
